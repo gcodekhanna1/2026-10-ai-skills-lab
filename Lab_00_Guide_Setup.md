@@ -22,6 +22,8 @@ The goal of this document is to walk you through the steps of setting up the bas
 
 If you have time before the workshop, you can do this setup at home. It will save you time in the lab.
 
+* **All guides and materials:** [gcodekhanna1.github.io/2026-10-ai-skills-lab](https://gcodekhanna1.github.io/2026-10-ai-skills-lab/). Each guide is a web page, with a PDF version to print or save.
+
 <br>
 
 ## Overview of What You Need

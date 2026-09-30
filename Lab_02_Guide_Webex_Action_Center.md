@@ -218,7 +218,7 @@ You also took a step beyond a self-contained tool: this app talks to a live exte
 
 Building with AI is an iterative process. Clear prompts, checking the results against the actual evidence, and keeping useful guides all help you create an MVP you can understand, run, and improve. Take what you've built, point it at your own Webex spaces, and keep experimenting!
 
-* **Next:** leave this app running (keep its terminal window open) and move on to Lab 03, or try the optional improvements below first.
+* **Next:** leave this app running (keep its terminal window open) and move on to [Lab 03 — Build an Image-to-Calendar Assistant](Lab_03_Guide_Image_to_Calendar.html), or try the optional improvements below first.
 
 <br>
 

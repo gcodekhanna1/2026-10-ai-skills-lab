@@ -71,16 +71,10 @@ The app is designed so that **a blank field is better than a wrong one**: if the
 
 ## Get Your Images Ready
 
-Do this **before** you send the prompt.
+Do this **before** you send the prompt. Download both images from [Lab 03 Supporting Materials](https://gcodekhanna1.github.io/2026-10-ai-skills-lab/#lab-03):
 
 * **App screenshot:** `Lab_03_app_preview.png`, the picture of the app you'll attach to the prompt.
-
-[PLACEHOLDER - Link to Lab_03_app_preview.png]
-
 * **Sample event poster:** `Lab_03_sample_poster.png`, a fictional event with known correct details, for testing your app in "Try It".
-
-[PLACEHOLDER - Link to Lab_03_sample_poster.png]
-
 * **Put both images in your lab folder**, the one you connected to your Cowork session in Lab 00, so they're easy to find.
 
 <br>

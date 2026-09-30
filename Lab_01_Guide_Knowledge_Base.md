@@ -74,10 +74,8 @@ And you can take the code home and keep using it! Once you’ve set up the requi
 
 Do this **before** you send the prompt, so Claude can use the PDFs to test the app it builds.
 
-* **Download the sample PDFs:** they come in a folder called `Sample PDFs`.
-
-[PLACEHOLDER - Link to the sample .pdf files]
-
+* **Download the sample PDFs:** go to [Lab 01 Supporting Materials](https://gcodekhanna1.github.io/2026-10-ai-skills-lab/#lab-01) and click **Download all (.zip)**.
+* **Unzip it:** open the downloaded `Sample PDFs.zip` (on a Mac, double-click it; on Windows, right-click it and choose **Extract All**). You get a folder called `Sample PDFs`.
 * **Put the folder in your lab folder:** move the whole `Sample PDFs` folder into the lab folder you connected to your Cowork session in Lab 00.
 * **Want to use your own PDFs?** Add them to the same folder.
 
@@ -226,7 +224,7 @@ In this lab, you practiced turning an idea into a working Python app with help f
 
 Building with AI is an iterative process. Clear prompts, checking the results, and keeping useful guides all help you create an MVP you can understand, run, and improve. Take what you’ve built, try it with your own documents, and keep experimenting!
 
-* **Next:** leave this app running (keep its terminal window open) and move on to Lab 02, or try the optional improvements below first.
+* **Next:** leave this app running (keep its terminal window open) and move on to [Lab 02 — Build a Webex Action Center](Lab_02_Guide_Webex_Action_Center.html), or try the optional improvements below first.
 
 <br>
 
