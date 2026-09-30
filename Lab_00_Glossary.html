@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Lab 00 — Glossary</title><style>
+*{box-sizing:border-box}body{margin:0;background:#f3f5f8;color:#172335;font:17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1000px;margin:36px auto;padding:48px 64px;background:white;border-radius:12px;box-shadow:0 4px 24px #1723350c}h1{font-size:2.3rem;line-height:1.2;margin-top:0;color:#102943}h2{font-size:1.55rem;line-height:1.3;border-bottom:1px solid #dce4ec;padding-bottom:10px}h3{font-size:1.15rem;margin-top:28px}li{margin:8px 0}a{color:#075da8}code{background:#edf1f5;padding:2px 5px;border-radius:4px;font-size:.9em;overflow-wrap:anywhere}pre{background:#edf1f5;padding:16px;border-radius:7px}pre code{padding:0}img{max-width:100%;height:auto;border:1px solid #dce4ec;border-radius:6px}p[align="center"]{margin:12px 0} @media(max-width:650px){main{margin:0;padding:28px 22px;border-radius:0}img{width:100%}h1{font-size:1.9rem}}@media print{body{background:white;font-size:11pt}main{margin:0;padding:0;max-width:none;box-shadow:none}h1,h2,h3{break-after:avoid}img,pre{break-inside:avoid}a{color:inherit}}
+
+table{border-collapse:collapse;width:100%;margin:20px 0}th,td{border:1px solid #dce4ec;padding:10px;text-align:left}th{background:#edf1f5}pre{white-space:pre-wrap;overflow-wrap:anywhere}
+@page { size: letter; margin: 0.65in; }
+@media print {
+  body { font-size: 10.5pt; line-height: 1.5; }
+  h1 { font-size: 25pt; }
+  h2 { font-size: 17pt; }
+  h3 { font-size: 12pt; }
+  p, li { orphans: 3; widows: 3; }
+  img { max-height: 7in; object-fit: contain; }
+  p[align="center"] { break-inside: avoid; }
+  pre { break-inside: auto; }
+  tr { break-inside: avoid; }
+  thead { display: table-header-group; }
+}
+
+blockquote{position:relative;margin:22px 0;padding:34px 22px 14px;background:#f4f8fd;border:1px solid #c9d8ee;border-left:5px solid #0b4f8a;border-radius:8px;font-family:"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;font-size:.86em;line-height:1.6;color:#10233f}blockquote::before{content:"PROMPT";position:absolute;top:10px;left:22px;font:700 .72rem/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:.12em;color:#0b4f8a}blockquote p{margin:10px 0}blockquote ul,blockquote ol{padding-left:22px}blockquote li{margin:4px 0}blockquote code{background:#e3ecf7}blockquote pre{background:#e3ecf7}@media print{blockquote{break-inside:auto;font-size:9pt}}
+</style></head><body><main><h1>Lab 00 — Glossary</h1>
+<p><em>Plain-language definitions of the tools and terms you'll meet in the labs</em></p>
+<h2>How to Use This Glossary</h2>
+<p>Keep this page open while you work. If you come across a term you don't know, look it up here, or ask Claude to explain it: that's part of learning as you build.</p>
+<br>
+
+<h2>Terms</h2>
+<table>
+<thead>
+<tr>
+  <th>Term</th>
+  <th>What it means</th>
+  <th>Where you'll see it</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><strong>AI coding tool</strong></td>
+  <td>An AI assistant that writes and changes code for you from plain-language instructions. In this workshop, that's Claude in Cowork.</td>
+  <td>All labs</td>
+</tr>
+<tr>
+  <td><strong>AI model</strong></td>
+  <td>The trained AI &quot;brain&quot; that reads text (or images) and produces answers. Some run in the cloud (like Claude); others run on your laptop (through Ollama).</td>
+  <td>All labs</td>
+</tr>
+<tr>
+  <td><strong>API (application programming interface)</strong></td>
+  <td>A way for one program to talk to another. Your Lab 02 app uses the Webex API to read your spaces and messages.</td>
+  <td>Lab 02</td>
+</tr>
+<tr>
+  <td><strong>Bot token</strong></td>
+  <td>An access token for a Webex bot account. Bots can't read a user's full conversation history, so Lab 02 uses a personal access token instead.</td>
+  <td>Lab 02</td>
+</tr>
+<tr>
+  <td><strong>ChromaDB</strong></td>
+  <td>A local database that stores embeddings and finds the chunks whose meaning is closest to your question.</td>
+  <td>Lab 01</td>
+</tr>
+<tr>
+  <td><strong>Chunk / chunking</strong></td>
+  <td>Splitting a document into small, overlapping pieces of text so the most relevant pieces can be found and sent to the model.</td>
+  <td>Lab 01</td>
+</tr>
+<tr>
+  <td><strong>Citation</strong></td>
+  <td>A note showing where an answer came from, such as the file name and page number.</td>
+  <td>Lab 01</td>
+</tr>
+<tr>
+  <td><strong>Claude</strong></td>
+  <td>Anthropic's AI assistant. You use it through the Claude desktop app to build the labs.</td>
+  <td>All labs</td>
+</tr>
+<tr>
+  <td><strong>Claude desktop app</strong></td>
+  <td>The Claude application installed on your laptop. You log in with your organization account and start Cowork sessions from it.</td>
+  <td>Lab 00</td>
+</tr>
+<tr>
+  <td><strong>Cloud model</strong></td>
+  <td>An AI model that runs on a company's servers over the internet. The lab apps deliberately avoid sending your data to cloud models.</td>
+  <td>All labs</td>
+</tr>
+<tr>
+  <td><strong>Command</strong></td>
+  <td>An instruction you type into Terminal and run by pressing Return, such as <code>ollama --version</code>.</td>
+  <td>All labs</td>
+</tr>
+<tr>
+  <td><strong>Confidence score</strong></td>
+  <td>How sure the model says it is about a result, from 0% to 100%. It's a hint, not proof: always check the evidence.</td>
+  <td>Lab 02</td>
+</tr>
+<tr>
+  <td><strong>Confirmation</strong></td>
+  <td>In Lab 03, the review checkbox plus the <strong>Confirm event</strong> button. Nothing can be downloaded until you confirm, and any edit clears the confirmation.</td>
+  <td>Lab 03</td>
+</tr>
+<tr>
+  <td><strong>Context rich</strong></td>
+  <td>After finishing the labs, your Claude session &quot;remembers&quot; what you've built and how you work, which makes it a strong starting point for your own projects.</td>
+  <td>All labs</td>
+</tr>
+<tr>
+  <td><strong>Context window</strong></td>
+  <td>How much text (and images) a model can read and write in one request, measured in tokens.</td>
+  <td>Lab 03</td>
+</tr>
+<tr>
+  <td><strong>Cowork</strong></td>
+  <td>The mode of the Claude desktop app you use for the labs. Claude can work with files in a folder you connect.</td>
+  <td>Lab 00</td>
+</tr>
+<tr>
+  <td><strong>Daylight saving time (DST)</strong></td>
+  <td>Clocks moving forward or back an hour. Some times don't exist or happen twice on those days, so Lab 03 asks you to resolve them instead of guessing.</td>
+  <td>Lab 03</td>
+</tr>
+<tr>
+  <td><strong>Dependencies</strong></td>
+  <td>The add-on libraries (&quot;packages&quot;) an app needs to run. uv installs them for you.</td>
+  <td>All labs</td>
+</tr>
+<tr>
+  <td><strong>Embedding</strong></td>
+  <td>A list of numbers that represents the meaning of a piece of text. Texts about similar things get similar numbers, which lets the app search by meaning rather than exact words.</td>
+  <td>Lab 01</td>
+</tr>
+<tr>
+  <td><strong>Embedding model</strong></td>
+  <td>A model that turns text into embeddings. Lab 01 uses <code>nomic-embed-text</code>.</td>
+  <td>Lab 01</td>
+</tr>
+<tr>
+  <td><strong>.env file</strong></td>
+  <td>A small settings file in a project folder, holding values such as your Webex access token. Its name starts with a dot, so Finder hides it.</td>
+  <td>Lab 02</td>
+</tr>
+<tr>
+  <td><strong>Evidence</strong></td>
+  <td>The original text (a PDF passage or a Webex message) that an AI result is based on, shown so you can check it yourself.</td>
+  <td>Labs 01, 02</td>
+</tr>
+<tr>
+  <td><strong>Extraction</strong></td>
+  <td>Pulling structured details (like tasks, dates or times) out of text or images.</td>
+  <td>Labs 02, 03</td>
+</tr>
+<tr>
+  <td><strong>gemma3:12b</strong></td>
+  <td>A Google AI model you can run in Ollama. An alternative model option in Lab 02.</td>
+  <td>Lab 02</td>
+</tr>
+<tr>
+  <td><strong>HEIC / HEIF</strong></td>
+  <td>The photo format many iPhones use by default. Supporting it is an optional improvement in Lab 03.</td>
+  <td>Lab 03</td>
+</tr>
+<tr>
+  <td><strong>IANA time zone</strong></td>
+  <td>The standard name for a time zone, such as <code>America/New_York</code> or <code>Europe/London</code>. Lab 03 requires one for every event.</td>
+  <td>Lab 03</td>
+</tr>
+<tr>
+  <td><strong>.ics file</strong></td>
+  <td>A standard calendar-event file that Outlook, Google Calendar and Apple Calendar can import.</td>
+  <td>Lab 03</td>
+</tr>
+<tr>
+  <td><strong>Inference</strong></td>
+  <td>The act of an AI model producing an answer. &quot;Local inference&quot; means the model runs on your laptop.</td>
+  <td>All labs</td>
+</tr>
+<tr>
+  <td><strong>JSON</strong></td>
+  <td>A simple, structured text format that programs can read easily. The lab apps ask the model to reply in JSON.</td>
+  <td>Labs 02, 03</td>
+</tr>
+<tr>
+  <td><strong>llama3.2:3b</strong></td>
+  <td>A small, fast AI model from Meta that writes the answers in Lab 01.</td>
+  <td>Lab 01</td>
+</tr>
+<tr>
+  <td><strong>LLM (large language model)</strong></td>
+  <td>An AI model trained on large amounts of text that can understand and write language. Claude, Llama and Qwen are LLMs.</td>
+  <td>All labs</td>
+</tr>
+<tr>
+  <td><strong>localhost</strong></td>
+  <td>Your own computer, as seen by your web browser. <code>http://localhost:8501</code> means &quot;the app running on this laptop, at port 8501&quot;.</td>
+  <td>All labs</td>
+</tr>
+<tr>
+  <td><strong>Markdown (.md)</strong></td>
+  <td>A simple text format for documents, where symbols such as <code>#</code> and <code>**</code> add headings and bold. The lab guides and READMEs are Markdown files.</td>
+  <td>All labs</td>
+</tr>
+<tr>
+  <td><strong>Menu bar</strong></td>
+  <td>The strip across the top of a Mac screen. The llama icon there means Ollama is running.</td>
+  <td>Lab 00</td>
+</tr>
+<tr>
+  <td><strong>Mocked test</strong></td>
+  <td>A test that uses a pretend version of something (like the AI model), so it runs quickly without needing the real thing.</td>
+  <td>All labs</td>
+</tr>
+<tr>
+  <td><strong>MVP (minimum viable product)</strong></td>
+  <td>A simple, working first version that does the main job. Each lab builds an MVP you can then improve.</td>
+  <td>All labs</td>
+</tr>
+<tr>
+  <td><strong>nomic-embed-text</strong></td>
+  <td>A small embedding model you run in Ollama to turn document text into embeddings.</td>
+  <td>Lab 01</td>
+</tr>
+<tr>
+  <td><strong>OCR (optical character recognition)</strong></td>
+  <td>Technology that reads text from a picture, such as a scanned page. The Lab 01 app doesn't do OCR, so scanned PDFs can't be read.</td>
+  <td>Lab 01</td>
+</tr>
+<tr>
+  <td><strong>Ollama</strong></td>
+  <td>A free, open-source app that downloads and runs AI models on your own computer.</td>
+  <td>All labs</td>
+</tr>
+<tr>
+  <td><strong>Opus 5.5</strong></td>
+  <td>The Claude model you use in Cowork for the labs.</td>
+  <td>Lab 00</td>
+</tr>
+<tr>
+  <td><strong>Personal access token</strong></td>
+  <td>A secret code from developer.webex.com that lets your app read your Webex spaces as you. It expires after 12 hours; keep it private.</td>
+  <td>Lab 02</td>
+</tr>
+<tr>
+  <td><strong>Pillow</strong></td>
+  <td>A Python library for opening, checking and resizing images.</td>
+  <td>Lab 03</td>
+</tr>
+<tr>
+  <td><strong>Port</strong></td>
+  <td>A numbered &quot;door&quot; an app uses on your computer. Each lab app has its own (8501, 8502, 8503), so all three can run at the same time.</td>
+  <td>All labs</td>
+</tr>
+<tr>
+  <td><strong>Prompt</strong></td>
+  <td>The instructions you give an AI in plain language. Each lab starts with a prompt that describes the app to build.</td>
+  <td>All labs</td>
+</tr>
+<tr>
+  <td><strong>Prompt injection</strong></td>
+  <td>Text that tries to trick an AI into following it as instructions, for example words hidden in an image. The Lab 03 app treats image text as data only.</td>
+  <td>Lab 03</td>
+</tr>
+<tr>
+  <td><strong>Pydantic</strong></td>
+  <td>A Python library that checks data has the expected shape. Lab 03 uses it to define and validate the model's answers.</td>
+  <td>Lab 03</td>
+</tr>
+<tr>
+  <td><strong>PyMuPDF</strong></td>
+  <td>A Python library that reads the text from PDF files, page by page.</td>
+  <td>Lab 01</td>
+</tr>
+<tr>
+  <td><strong>pytest</strong></td>
+  <td>A tool that runs a project's automated tests. You run it with <code>uv run pytest</code>.</td>
+  <td>All labs</td>
+</tr>
+<tr>
+  <td><strong>Python</strong></td>
+  <td>The programming language all three lab apps are written in.</td>
+  <td>All labs</td>
+</tr>
+<tr>
+  <td><strong>qwen3.5 (4b, 9b, 27b)</strong></td>
+  <td>A family of AI models from Alibaba that can read text and images. <code>9b</code> is the default for Labs 02 and 03; <code>4b</code> is smaller and faster; <code>27b</code> is larger and slower.</td>
+  <td>Labs 02, 03</td>
+</tr>
+<tr>
+  <td><strong>RAG (retrieval-augmented generation)</strong></td>
+  <td>A technique where the app first finds (retrieves) the most relevant passages from your documents, then has the model write (generate) an answer from them.</td>
+  <td>Lab 01</td>
+</tr>
+<tr>
+  <td><strong>Read-only</strong></td>
+  <td>Allowed to read but never change anything. The Lab 02 app never sends, edits or deletes anything in Webex.</td>
+  <td>Lab 02</td>
+</tr>
+<tr>
+  <td><strong>README</strong></td>
+  <td>A file (usually <code>README.md</code>) that explains what a project does and how to install, start, use and troubleshoot it. Claude writes one for each lab app.</td>
+  <td>All labs</td>
+</tr>
+<tr>
+  <td><strong>Schema / structured output</strong></td>
+  <td>A strict description of the shape an answer must have (fields and types). Ollama can force a model's reply to match it, so the app can read it reliably.</td>
+  <td>Labs 02, 03</td>
+</tr>
+<tr>
+  <td><strong>Session memory</strong></td>
+  <td>Data kept only while the browser tab is open. In Lab 03, drafts can be lost if you refresh the page or restart the app.</td>
+  <td>Lab 03</td>
+</tr>
+<tr>
+  <td><strong>SQLite</strong></td>
+  <td>A small database stored in a single file on your laptop. The lab apps use it to remember documents, messages, tasks and your decisions.</td>
+  <td>Labs 01, 02</td>
+</tr>
+<tr>
+  <td><strong>Streamlit</strong></td>
+  <td>A Python library for building simple web apps. All three lab apps use it for their interface.</td>
+  <td>All labs</td>
+</tr>
+<tr>
+  <td><strong>Terminal</strong></td>
+  <td>The Mac app where you type commands. Open it with <strong>⌘ + Space</strong>, type <strong>Terminal</strong>, and press <strong>Return</strong>.</td>
+  <td>All labs</td>
+</tr>
+<tr>
+  <td><strong>Token (AI)</strong></td>
+  <td>A small piece of text (roughly part of a word) that AI models read and write. Context windows are measured in tokens.</td>
+  <td>Lab 03</td>
+</tr>
+<tr>
+  <td><strong>Transcription</strong></td>
+  <td>The text a model reads from an image, written out. It can contain mistakes, so check it against the image.</td>
+  <td>Lab 03</td>
+</tr>
+<tr>
+  <td><strong>uv</strong></td>
+  <td>A fast, free tool that installs Python and each app's dependencies, keeping every project's setup separate.</td>
+  <td>All labs</td>
+</tr>
+<tr>
+  <td><strong>uv run</strong></td>
+  <td>Runs a command inside the project's own environment, e.g. <code>uv run streamlit run app.py</code> starts the app.</td>
+  <td>All labs</td>
+</tr>
+<tr>
+  <td><strong>uv sync</strong></td>
+  <td>Installs everything a project needs, as listed in its <code>pyproject.toml</code> file.</td>
+  <td>All labs</td>
+</tr>
+<tr>
+  <td><strong>Vector database</strong></td>
+  <td>A database that stores embeddings and quickly finds the most similar ones. ChromaDB is a vector database.</td>
+  <td>Lab 01</td>
+</tr>
+<tr>
+  <td><strong>Vibe coding</strong></td>
+  <td>Building software by describing what you want to an AI and refining the result together, rather than writing every line of code yourself.</td>
+  <td>All labs</td>
+</tr>
+<tr>
+  <td><strong>Vision model</strong></td>
+  <td>An AI model that can read images as well as text. Lab 03 uses one to read event flyers.</td>
+  <td>Lab 03</td>
+</tr>
+<tr>
+  <td><strong>Webex space</strong></td>
+  <td>A Webex chat room, either a one-to-one conversation or a group.</td>
+  <td>Lab 02</td>
+</tr>
+</tbody>
+</table>
+</main></body></html>
