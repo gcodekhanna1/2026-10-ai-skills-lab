@@ -4,7 +4,7 @@
 <style>
 *{box-sizing:border-box}body{margin:0;background:#eef1f6;color:#172335;font:16px/1.6 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
 a{color:#075da8}.muted{color:#5a6878}
-.strip{height:170px;background:#0b0c12 center 58%/cover no-repeat}.strip.plain{height:90px;background:linear-gradient(90deg,#ff8a3d,#e0409b,#7b4dff,#2f6bff)}
+.strip{height:clamp(140px,26vw,300px);background:#0b0c12 center 50%/cover no-repeat}.strip.plain{height:90px;background:linear-gradient(90deg,#ff8a3d,#e0409b,#7b4dff,#2f6bff)}
 main{max-width:760px;margin:-40px auto 40px;background:#fff;border-radius:14px;padding:34px 40px;position:relative;box-shadow:0 8px 30px #0f1b3320}
 .kicker{text-transform:uppercase;letter-spacing:.12em;font-size:.75em;color:#7b4dff;font-weight:700}
 h1{margin:.1em 0;color:#102943;line-height:1.2}.bar{height:4px;border-radius:2px;background:linear-gradient(90deg,#ff8a3d,#e0409b,#7b4dff,#2f6bff);margin:14px 0 20px}
@@ -23,13 +23,17 @@ a.sub{font-size:.8em;border:1px solid #dde3ec;border-radius:6px;padding:1px 9px;
 .extras{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:22px}.extras>div{background:#f4f8fd;border-radius:10px;padding:12px 14px}
 .extras ul{list-style:none;padding:0;margin:6px 0 0}.extras li{display:flex;align-items:center;gap:8px;margin:4px 0}
 .foot{text-align:center;color:#7d869a;font-size:.85em;margin-top:22px}
-@media(max-width:650px){main{margin:-30px 10px 20px;padding:22px 18px}.extras{grid-template-columns:1fr}.strip{height:120px}}
+.people{margin:0 0 4px 60px}.people code{background:#f1f4f8;padding:1px 5px;border-radius:4px;font-size:.9em}
+@media(max-width:650px){.people{margin-left:0}}
+@media(max-width:650px){main{margin:-30px 10px 20px;padding:22px 18px}.extras{grid-template-columns:1fr}}
 </style></head><body>
 <div class="strip" role="img" aria-label="WebexOne 26" style="background-image:url('Website_Banner_WebexOne26.jpg')"></div>
 <main>
 <div class="kicker">WebexOne 2026 · Building AI Skills</div>
 <h1>Your lab journey</h1>
 <p class="muted">4 steps, one Claude session. Start with Lab 00 and work through the labs in order; each lab lists what you'll need right next to it. <strong>Open guide</strong> opens the lab as a web page.</p>
+<div class="bar"></div>
+<section class="people" id="participants"><div class="body"><div class="st">Before you start</div><h3>Participants — Option 1</h3><p>Find your name to see your demo account (<code>demo-xy</code>) and sign-in details.</p><div class="acts"><a class="go" href="Lab_Participants%20-%20Option%201.html">Open participant list</a><span class="subs"><a class="sub" href="Lab_Participants%20-%20Option%201.pdf">PDF</a><a class="sub" href="https://github.com/gcodekhanna1/2026-10-ai-skills-lab/blob/main/Lab_Participants%20-%20Option%201.md" title="Markdown source (same content), shown on GitHub">.md</a></span></div></div></section>
 <div class="bar"></div>
 <div class="steps">
 <div class="step" id="lab-00"><div class="dot">00</div><div class="body"><div class="st">Lab 00</div><h3>Let&#x27;s Get Started!</h3><p>Set up the Claude desktop app, a Cowork session and Ollama on your laptop.</p><div class="acts"><a class="go" href="Lab_00_Guide_Setup.html">Open guide</a><span class="subs"><a class="sub" href="Lab_00_Guide_Setup.pdf">PDF</a><a class="sub" href="https://github.com/gcodekhanna1/2026-10-ai-skills-lab/blob/main/Lab_00_Guide_Setup.md" title="Markdown source (same content), shown on GitHub">.md</a></span></div></div></div>
