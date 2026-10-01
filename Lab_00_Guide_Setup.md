@@ -41,7 +41,7 @@ If you have time before the workshop, you can do this setup at home. It will sav
 
 * **Email access:** a way to access one of your email accounts (either a work-related or personal account) to receive the verification link from Claude.
 
-* **Web browser:** to access the Webex organization you'll be a part of (this is for Lab 02).
+* **Web browser:** to access the Webex organization you'll be a part of (used in Lab 02, and so the lab team can send you files and help during the workshop).
 
 * **Note:** you'll install a few free tools (Ollama now, and uv in Lab 01). If your work laptop doesn't allow installs, ask us for a lab PC.
 
@@ -150,9 +150,11 @@ ollama --version
 
 ## Access Webex Messaging
 
-* From your web browser, go to [webex.com](https://www.webex.com).
+* **Why now:** you won't need Webex until Lab 02, but once you're signed in, the lab team can send you files and help directly in Webex if you get stuck.
 
-* Click **Sign In** and log in with your organization email, `demo-xy@paradigmventures.ai`. The password is `Cisco123#`.
+* In your web browser, open a private (incognito) window and go to [web.webex.com](https://web.webex.com).
+
+* Sign in with your organization email, `demo-xy@paradigmventures.ai`. The password is `Cisco123#`.
 
 * You should see some Webex spaces with conversations already underway:
 

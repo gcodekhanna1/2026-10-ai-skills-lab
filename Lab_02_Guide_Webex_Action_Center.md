@@ -205,6 +205,7 @@ Common problems:
 * **"Model isn't downloaded":** run the `ollama pull …` command shown in the message, then try again.
 * **"No pending actions found":** the run worked, but no open tasks were found. Check the sidebar's **Last run** summary for problems, or try the neighbor exercise above.
 * **The first sync is slow:** the model takes a moment to load, and every space is analyzed for the first time. Later syncs skip spaces that haven't changed.
+* **Your laptop slows to a crawl or freezes:** AI models running on your laptop need a lot of memory, and older laptops can struggle. Close other apps first. If that doesn't help, ask Claude: "My laptop is struggling. Please switch the app to the smaller qwen3.5:4b model and update the guides." Or ask a lab proctor for a lab PC.
 * **"Port 8502 is already in use":** the app is probably already running in another terminal window. Stop that one with **Control + C**, or use the one that's running.
 * **Anything else:** copy the error message into Claude and ask for help, as in the example above.
 

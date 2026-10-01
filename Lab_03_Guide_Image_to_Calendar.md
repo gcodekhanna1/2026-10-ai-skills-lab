@@ -230,6 +230,7 @@ Common problems:
 * **The image is rejected:** use a PNG or JPEG. HEIC photos from an iPhone need Round 2's improvement; until then, take a screenshot of the photo.
 * **Fields are left blank:** that's intended when the image doesn't clearly show something, such as the year or time zone. Read the app's notes and fill them in yourself.
 * **The first extraction is slow:** the model takes a moment to load. Later extractions are faster.
+* **Your laptop slows to a crawl or freezes:** AI models running on your laptop need a lot of memory, and older laptops can struggle. Close other apps first. If that doesn't help, ask Claude: "My laptop is struggling. Please switch the app to the smaller qwen3.5:4b model and update the guides." Or ask a lab proctor for a lab PC.
 * **"Port 8503 is already in use":** the app is probably already running in another terminal window. Stop that one with **Control + C**, or use the one that's running.
 * **Anything else:** copy the error message into Claude and ask for help, as in the example above.
 
