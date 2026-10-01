@@ -12,8 +12,8 @@
 |  | demo-06 | `demo-06@paradigmventures.ai` |  | `Cisco123#` |
 |  | demo-07 | `demo-07@paradigmventures.ai` |  | `Cisco123#` |
 |  | demo-08 | `demo-08@paradigmventures.ai` |  | `Cisco123#` |
-|  | demo-09 | `demo-09@paradigmventures.ai` |  | `Cisco123#` |
-|  | demo-10 | `demo-10@paradigmventures.ai` |  | `Cisco123#` |
+|  | demo-09 | `demo-09@paradigmventures.ai` | `yujane@cisco.com` | `Cisco123#` |
+|  | demo-10 | `demo-10@paradigmventures.ai` | `chwalla2@cisco.com` | `Cisco123#` |
 |  | demo-11 | `demo-11@paradigmventures.ai` |  | `Cisco123#` |
 |  | demo-12 | `demo-12@paradigmventures.ai` |  | `Cisco123#` |
 |  | demo-13 | `demo-13@paradigmventures.ai` |  | `Cisco123#` |
