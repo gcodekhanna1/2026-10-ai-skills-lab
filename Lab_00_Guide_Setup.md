@@ -97,7 +97,13 @@ If you have time before the workshop, you can do this setup at home. It will sav
 
 ### Start a Cowork session
 
-* In the upper left corner, make sure you're on **Home** and not **Code**.
+* At the top right of the sidebar, make sure **Chat and Cowork** (the speech-bubble icon) is selected, not **Code** (the `</>` icon).
+
+<br>
+<p align="center">
+  <img src="Lab_00_Claude_Chat_Cowork_Toggle.png" alt="The Chat and Cowork button selected at the top of the Claude desktop app sidebar, next to the Code button" width="50%">
+</p>
+<br>
 
 * In the upper left corner, click the **+ New** button.
     - **Don't see it?** The sidebar may be hidden: click the sidebar icon at the top left to show it.
