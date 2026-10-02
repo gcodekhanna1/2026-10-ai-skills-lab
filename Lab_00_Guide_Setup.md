@@ -91,17 +91,17 @@ If you have time before the workshop, you can do this setup at home. It will sav
 
 <br>
 <p align="center">
-  <img src="Lab_00_Claude_Initial_View.png" alt="Claude desktop app after logging in" width="60%">
+  <img src="Lab_00_Claude_Initial_View_Screenshot.png" alt="Claude desktop app after logging in" width="80%">
 </p>
 <br>
 
 ### Start a Cowork session
 
-* At the top right of the sidebar, make sure **Chat and Cowork** (the speech-bubble icon) is selected, not **Code** (the `</>` icon).
+* At the top right of the sidebar, make sure **Chat and Cowork** (the speech-bubble icon) is selected.
 
 <br>
 <p align="center">
-  <img src="Lab_00_Claude_Chat_Cowork_Toggle.png" alt="The Chat and Cowork button selected at the top of the Claude desktop app sidebar, next to the Code button" width="50%">
+  <img src="Lab_00_Claude_Chat_Cowork_Toggle_Screenshot.png" alt="The Chat and Cowork button selected at the top of the Claude desktop app sidebar, next to the Code button" width="50%">
 </p>
 <br>
 
@@ -166,7 +166,7 @@ ollama --version
 
 <br>
 <p align="center">
-  <img src="Lab_00_WebEx_Screenshot_01.png" alt="Webex spaces with conversations underway" width="60%">
+  <img src="Lab_00_Webex_Spaces_Screenshot.png" alt="Webex spaces with conversations underway" width="60%">
 </p>
 <br>
 

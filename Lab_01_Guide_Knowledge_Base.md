@@ -149,9 +149,12 @@ ollama pull nomic-embed-text
 
 * **Check back every few minutes:** Claude may ask you a question or ask you to approve a step, and it waits until you answer.
 
-[PLACEHOLDER - Screenshot of Claude showing its progress while it builds the app]
+* **Follow along:** the **Progress** panel on the right of the Claude window lists the steps Claude is working through and highlights the current one.
 
-
+<br>
+<p align="center">
+  <img src="Lab_01_Claude_Progress_Screenshot.png" alt="Claude's Progress panel listing the build steps, with step 1, Building app code, in progress" width="35%">
+</p>
 <br>
 
 ## Run Your App
@@ -163,8 +166,12 @@ When Claude has finished, your project folder, `lab-01-knowledge-base`, contains
 * **Open the app:** your browser opens http://localhost:8501. If it doesn't, type that address into your browser.
 * **Keep the terminal window open:** the app runs as long as that window is open. To stop it, click the window and press **Control + C**.
 
-[PLACEHOLDER - Screenshot of the running app]
+Here is what an initial result could look like:
 
+<br>
+<p align="center">
+  <img src="Lab_01_Knowledge_Base_Screenshot.png" alt="The Knowledge Base app at localhost:8501, with the upload area, the list of indexed documents, and the question box" width="80%">
+</p>
 <br>
 
 ## Try It

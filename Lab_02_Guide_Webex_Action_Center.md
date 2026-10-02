@@ -131,10 +131,15 @@ ollama pull qwen3.5:9b
 ### Get Your Webex Access Token
 
 * Go to [developer.webex.com](https://developer.webex.com) and click **Log in**. Use your organization account, `demo-xy@paradigmventures.ai`.
-* Open [Getting Started](https://developer.webex.com/docs/getting-started) and find **Your Personal Access Token**. Click the **copy** icon next to it. You'll paste it when you start the app.
-* **Note:** the token is valid for **12 hours**. Keep it private: anyone with it can act as you in Webex. Your app only uses it to read.
+* Click your profile picture (the circle with your initial) at the top right. Next to **Bearer**, click the **copy** icon. The token shows as stars, but it's copied. You'll paste it when you start the app.
 
-[PLACEHOLDER - Screenshot of the Personal Access Token on developer.webex.com]
+<br>
+<p align="center">
+  <img src="Lab_02_Webex_Access_Token_Screenshot.png" alt="The profile menu on developer.webex.com, with the Bearer access token and its copy icon" width="35%">
+</p>
+<br>
+
+* **Note:** the token is valid for **12 hours**. Keep it private: anyone with it can act as you in Webex. Your app only uses it to read.
 
 ### Send Your Neighbor a Message
 
@@ -156,7 +161,7 @@ Here is what an initial result could look like:
 
 <br>
 <p align="center">
-  <img src="Lab_02_Dashboard_Screenshot.png" alt="Webex Action Center dashboard with the sync summary in the sidebar and task cards" width="70%">
+  <img src="Lab_02_Action_Center_Screenshot.png" alt="The Webex Action Center at localhost:8502, with the sync summary in the sidebar and action cards showing owner, priority, due date and evidence" width="80%">
 </p>
 <br>
 
