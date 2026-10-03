@@ -36,11 +36,11 @@ Check that `My Workshop Summary.md` appears in your lab folder. It's a Markdown 
 
 <br>
 
-## Step 2 (Optional): Save How You Like to Work as a Skill
+## Step 2: Save How You Like to Work as a Skill
 
-A skill is a document that tells Claude how you like things done, so you don't have to explain it again in every session. Send this prompt:
+A skill is a document that tells Claude how you like things done, so you don't have to explain it again in every session. If you saved a skill during the labs, this step brings it up to date. Send this prompt:
 
-> Based on this session, write a skill file that describes how I like to work: my preferences for apps, guides, explanations and prompts, and the practices that worked well today. Save it as `My Building Skill.md` in my lab folder.
+> Update `My Building Skill.md` in my lab folder with everything you learned in this session about how I like to work: my preferences for apps, guides, explanations and prompts, and the practices that worked well. Keep what's already in the file. If the file doesn't exist yet, create it.
 
 <br>
 

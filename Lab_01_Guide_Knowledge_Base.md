@@ -206,6 +206,16 @@ For more detail, read "Behind the Scenes" above, or open `Application Guide.html
 
 <br>
 
+## Save What You Learned as a Skill
+
+A **skill** is a document that tells Claude how you like things done, so you don't have to explain it again in every session. You heard about skills in the presentation: now you'll build your own, one lab at a time. Send this prompt:
+
+> Based on what we just did in Lab 01, write a skill file that describes how I like to build apps: my preferences for how apps are set up, started and documented (for example, a start file, a Quickstart and an Application Guide), how I like things explained, and the practices that worked well. Save it as `My Building Skill.md` in my lab folder.
+
+In a later session, ask Claude to read `My Building Skill.md` first, and it will build the way you like from the start.
+
+<br>
+
 ## If You Get Stuck
 
 If something fails, describe to Claude what you did, what you expected, and what happened. Include the error message when there is one. For example:

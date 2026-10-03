@@ -220,6 +220,16 @@ For more detail, read "Behind the Scenes" above, or open `Application Guide.html
 
 <br>
 
+## Save What You Learned as a Skill
+
+Add what you learned in this lab to your skill file, `My Building Skill.md`. Send this prompt:
+
+> Update `My Building Skill.md` in my lab folder with what we learned in Lab 03, such as giving you a screenshot of the design I want, and keeping a person in the loop to check the AI's work before anything is saved or sent. Keep everything that's already in the file. If the file doesn't exist yet, create it.
+
+In a later session, ask Claude to read `My Building Skill.md` first, and it will build the way you like from the start.
+
+<br>
+
 ## If You Get Stuck
 
 If something fails, describe to Claude what you did, what you expected, and what happened. Include the error message when there is one. For example:

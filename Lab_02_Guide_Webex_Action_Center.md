@@ -195,6 +195,16 @@ For more detail, read "Behind the Scenes" above, or open `Application Guide.html
 
 <br>
 
+## Save What You Learned as a Skill
+
+Add what you learned in this lab to the skill file you started in Lab 01, `My Building Skill.md`. Send this prompt:
+
+> Update `My Building Skill.md` in my lab folder with what we learned in Lab 02, such as working with an outside service's API, keeping my access token private, and checking the AI's results against the evidence. Keep everything that's already in the file. If the file doesn't exist yet, create it.
+
+In a later session, ask Claude to read `My Building Skill.md` first, and it will build the way you like from the start.
+
+<br>
+
 ## If You Get Stuck
 
 If something fails, describe to Claude what you did, what you expected, and what happened. Include the error message when there is one. For example:
