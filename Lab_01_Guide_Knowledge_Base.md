@@ -215,6 +215,7 @@ If something fails, describe to Claude what you did, what you expected, and what
 Common problems:
 
 * **Claude says it can't find your folder:** add your lab folder to the session again, then tell Claude: "I've attached the folder now. Please put the project there."
+* **Strange file errors, or the build keeps failing:** check where your lab folder is. If it's inside OneDrive, Dropbox, Box, Google Drive or iCloud (including a synced Desktop or Documents folder), the sync app can lock files while Claude writes them. Create a new folder in your home folder (see Lab 00), add it to the session, and ask Claude to build the project there.
 * **The Mac won't open the start file:** right-click `Start Knowledge Base.command`, choose **Open**, then click **Open** again. If it still won't run, ask Claude to make the start file executable.
 * **`uv: command not found`:** this only happens if you type the manual commands yourself. Close Terminal completely (**⌘ + Q**), open it again, and go back to your project folder. Terminal needs a restart to find uv after it's installed.
 * **"Can't reach Ollama":** open the Ollama app and check for the llama icon in the menu bar, then try again.
@@ -245,3 +246,9 @@ If you have time, try improving your Knowledge Base. Make one change at a time a
 > Let me choose which uploaded document to search, instead of always searching all of them.
 
 > Add a Copy answer button, so I can paste the answer and its sources into an email or chat.
+
+<br>
+
+## What's Next
+
+* **Next:** you've built your Knowledge Base! Continue to [Lab 02 — Build a Webex Action Center](Lab_02_Guide_Webex_Action_Center.html).

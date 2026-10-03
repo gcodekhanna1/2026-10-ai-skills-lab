@@ -19,6 +19,10 @@ table{border-collapse:collapse;width:100%;margin:20px 0}th,td{border:1px solid #
 
 blockquote{position:relative;margin:22px 0;padding:34px 22px 14px;background:#f4f8fd;border:1px solid #c9d8ee;border-left:5px solid #0b4f8a;border-radius:8px;font-family:"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;font-size:.86em;line-height:1.6;color:#10233f}blockquote::before{content:"PROMPT";position:absolute;top:10px;left:22px;font:700 .72rem/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:.12em;color:#0b4f8a}blockquote p{margin:10px 0}blockquote ul,blockquote ol{padding-left:22px}blockquote li{margin:4px 0}blockquote code{background:#e3ecf7}blockquote pre{background:#e3ecf7}@media print{blockquote{break-inside:auto;font-size:9pt}}
 
+p.warning{color:#b42318;background:#fef3f2;border:1px solid #fecdca;border-left:5px solid #d92d20;border-radius:8px;padding:12px 16px;font-weight:600}@media print{p.warning{break-inside:avoid}}
+
+.copybtn{position:absolute;top:8px;right:10px;display:inline-flex;align-items:center;gap:5px;font:600 .72rem/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:.04em;color:#0b4f8a;background:#fff;border:1px solid #c9d8ee;border-radius:6px;padding:5px 9px;cursor:pointer}.copybtn:hover{background:#e3ecf7}.copybtn svg{width:14px;height:14px}.copybtn.done{color:#067647;border-color:#abefc6}@media print{.copybtn{display:none!important}}
+
 .topnav{position:sticky;top:0;z-index:10;background:#0b0c12;border-bottom:3px solid transparent;border-image:linear-gradient(90deg,#ff8a3d,#e0409b,#7b4dff,#2f6bff) 1}.topnav div{max-width:1000px;margin:0 auto;padding:10px 16px;display:flex;justify-content:space-between;align-items:center;gap:12px;font:14px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.topnav a{display:inline-block;padding:2px;border-radius:999px;background:linear-gradient(90deg,#ff8a3d,#e0409b,#7b4dff,#2f6bff);text-decoration:none;flex:none}.topnav a span{display:block;background:#0b0c12;border-radius:999px;padding:4px 14px;font-weight:600}.topnav a b{background:linear-gradient(90deg,#ffb07a,#f06ab8,#a98bff,#7fa6ff);-webkit-background-clip:text;background-clip:text;color:transparent}.topnav a:hover span{background:transparent}.topnav a:hover b{color:#fff;background:none;-webkit-background-clip:border-box}.topnav small{color:#c9b8ff;letter-spacing:.1em;text-transform:uppercase;font-size:11px;text-align:right}.bottomnav{margin-top:36px;padding-top:18px;border-top:1px solid #dce4ec}.bottomnav a{display:inline-block;font-weight:600;color:#fff;background:linear-gradient(90deg,#ff8a3d,#e0409b,#7b4dff,#2f6bff);padding:7px 16px;border-radius:8px;text-decoration:none}@media(max-width:650px){.topnav small{display:none}}@media print{.topnav,.bottomnav{display:none!important}}
 </style></head><body><nav class="topnav"><div><a href="https://gcodekhanna1.github.io/2026-10-ai-skills-lab/"><span><b>← Main Menu</b></span></a><small>WebexOne 2026 · Building AI Skills</small></div></nav><main><h1>Building AI Skills Workshop — Option 1</h1>
 <p><em>Participant list and demo account assignments. Find your name to see your demo account.</em></p>
@@ -276,4 +280,35 @@ blockquote{position:relative;margin:22px 0;padding:34px 22px 14px;background:#f4
 </tr>
 </tbody>
 </table>
-<div class="bottomnav"><a href="https://gcodekhanna1.github.io/2026-10-ai-skills-lab/">← Main Menu</a></div></main></body></html>
+<div class="bottomnav"><a href="https://gcodekhanna1.github.io/2026-10-ai-skills-lab/">← Main Menu</a></div></main><script>
+(function(){
+  var ICON='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>';
+  function toText(el){
+    var out=[];
+    Array.prototype.forEach.call(el.children,function(n){
+      if(n.classList.contains('copybtn'))return;
+      if(n.tagName==='UL'||n.tagName==='OL'){
+        Array.prototype.forEach.call(n.children,function(li,i){
+          out.push((n.tagName==='OL'?(i+1)+'. ':'- ')+li.innerText.trim());});
+      }else if(n.tagName==='PRE'){out.push(n.innerText.replace(/\n$/,''));}
+      else{out.push(n.innerText.trim());}
+      out.push('');
+    });
+    return out.join('\n').trim()+'\n';
+  }
+  function fallback(t){var a=document.createElement('textarea');a.value=t;a.style.position='fixed';a.style.opacity='0';
+    document.body.appendChild(a);a.select();try{document.execCommand('copy');}finally{document.body.removeChild(a);}}
+  document.querySelectorAll('main blockquote').forEach(function(bq){
+    var b=document.createElement('button');b.type='button';b.className='copybtn';b.title='Copy this prompt';
+    b.innerHTML=ICON+'<span>Copy</span>';
+    b.addEventListener('click',function(){
+      var t=toText(bq),label=b.querySelector('span');
+      var done=function(){b.classList.add('done');label.textContent='Copied!';
+        setTimeout(function(){b.classList.remove('done');label.textContent='Copy';},1800);};
+      if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(done,function(){fallback(t);done();});}
+      else{fallback(t);done();}
+    });
+    bq.appendChild(b);
+  });
+})();
+</script></body></html>

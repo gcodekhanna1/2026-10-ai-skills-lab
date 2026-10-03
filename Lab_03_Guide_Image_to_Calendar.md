@@ -229,6 +229,7 @@ If something fails, describe to Claude what you did, what you expected, and what
 Common problems:
 
 * **Claude says it can't find your folder:** add your lab folder to the session again, then tell Claude: "I've attached the folder now. Please put the project there."
+* **Strange file errors, or the build keeps failing:** check where your lab folder is. If it's inside OneDrive, Dropbox, Box, Google Drive or iCloud (including a synced Desktop or Documents folder), the sync app can lock files while Claude writes them. Create a new folder in your home folder (see Lab 00), add it to the session, and ask Claude to build the project there.
 * **The Mac won't open the start file:** right-click `Start Image to Calendar.command`, choose **Open**, then click **Open** again. If it still won't run, ask Claude to make the start file executable.
 * **"Can't reach Ollama":** open the Ollama app and check for the llama icon in the menu bar, then try again.
 * **"Model isn't downloaded":** run the `ollama pull …` command shown in the message, then try again.
@@ -442,3 +443,9 @@ If your app lets users select among suggestions, edits are probably not retained
 Before asking AI to implement your idea, write three sentences: who it helps, what should change, and how you'll check it. Keep human review and confirmation in the workflow, and update the guides and relevant checks as the app evolves.
 
 You can take the project home and use your own images. The skill to practice is the same: describe a useful first version, observe its behavior, and turn that evidence into the next improvement.
+
+<br>
+
+## What's Next
+
+* **Next:** you've finished all three labs! Your Claude session now knows what you've built and how you like to work, so it's a great place to start your own project, such as a fitness tracker or a portfolio tracker. Or go back to the [Main Menu](https://gcodekhanna1.github.io/2026-10-ai-skills-lab/) to revisit any lab.

@@ -49,9 +49,16 @@ If you have time before the workshop, you can do this setup at home. It will sav
 
 ## Create a Folder for Your Lab Files
 
-* Create a folder on your desktop:
+<p class="warning">⚠️ Make sure to create this folder in your computer's home folder (the folder with your user name). Do NOT create it in OneDrive, Dropbox, Box, Google Drive or iCloud Drive. We have found that the constant syncing of these cloud-based folders breaks the build. The Desktop or Documents folder is OK as long as it isn't being synced by a cloud service.</p>
+
+* Create the folder in your **home folder** (the folder with your user name):
+    - **Mac:** in Finder, press **⌘ + Shift + H**. Your home folder opens (e.g. `/Users/yourname`). Choose **File → New Folder**.
+    - **Windows:** in File Explorer, click the address bar, type `%USERPROFILE%` and press **Enter**. Your home folder opens (e.g. `C:\Users\yourname`). Choose **New → Folder**.
     - Give it a unique name, such as `2026 - WebexOne - AI Skills Lab - Demo XY`, where "XY" corresponds to your organization email handle.
     - This is the folder that will contain all the files and dependencies for what you will be building in this lab.
+
+* **Why not a synced folder?** While Claude builds, it creates thousands of small files. A sync app trying to upload them at the same time can lock files and break the build. Desktop and Documents are often synced without you noticing (by iCloud on a Mac, or OneDrive on many work laptops), which is why we use your home folder.
+    - **Quick check:** if the folder's location includes "OneDrive", "Dropbox", "Box", "Google Drive" or "iCloud", move it.
 
 
 <br>

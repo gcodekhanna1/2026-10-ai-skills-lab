@@ -204,6 +204,7 @@ If something fails, describe to Claude what you did, what you expected, and what
 Common problems:
 
 * **Claude says it can't find your folder:** add your lab folder to the session again, then tell Claude: "I've attached the folder now. Please put the project there."
+* **Strange file errors, or the build keeps failing:** check where your lab folder is. If it's inside OneDrive, Dropbox, Box, Google Drive or iCloud (including a synced Desktop or Documents folder), the sync app can lock files while Claude writes them. Create a new folder in your home folder (see Lab 00), add it to the session, and ask Claude to build the project there.
 * **The Mac won't open the start file:** right-click `Start Action Center.command`, choose **Open**, then click **Open** again. If it still won't run, ask Claude to make the start file executable.
 * **"Webex rejected your access token (401)":** your token has expired (they last 12 hours) or was pasted incorrectly. Stop the app, copy a fresh token from developer.webex.com, double-click the start file again, and paste the new token when it asks.
 * **"Can't reach Ollama":** open the Ollama app and check for the llama icon in the menu bar, then try again.
@@ -239,3 +240,9 @@ If you have time, try improving your Action Center. Make one change at a time an
 Or, if the app picks up something that isn't a real task:
 
 > The app found a task in a space that was really just a joke, not a real commitment. Help me tighten the extraction logic or the prompt so it's more conservative.
+
+<br>
+
+## What's Next
+
+* **Next:** you've built your Webex Action Center! Continue to [Lab 03 — Build an Image-to-Calendar Assistant](Lab_03_Guide_Image_to_Calendar.html).
