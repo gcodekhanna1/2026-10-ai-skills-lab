@@ -1,4 +1,4 @@
-# Building AI Skills Workshop — Session 1
+# Building AI Projects Workshop — Session 1
 
 *Participant list and demo account assignments. Find your name to see your demo account.*
 

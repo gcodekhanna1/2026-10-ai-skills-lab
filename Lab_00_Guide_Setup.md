@@ -1,6 +1,7 @@
 <!--
 STYLE GUIDE FOR THE LAB GUIDES (this comment doesn't appear in the preview)
 - Headings: one # title per document; ## for main sections; ### for sub-steps.
+- Heading capitalization: Title Case, e.g. "Start a Cowork Session". Capitalize every word except short words (a, an, the, and, or, to, of, in, on, for, as, with) unless they come first.
 - Bullets: * for top-level bullets, - for sub-bullets.
 - Label bullets: start with a bold label and a colon, e.g. **Ollama:** a free tool...
 - Things to click or press: bold, with the exact wording on screen, e.g. click **+ New**, press **Return**.
@@ -65,14 +66,14 @@ If you have time before the workshop, you can do this setup at home. It will sav
 
 ## Claude Desktop App
 
-### Install the Claude desktop app
+### Install the Claude Desktop App
 
 * If you have not done so already, install the Claude desktop app from [claude.com/download](https://claude.com/download).
     - **Already have it?** Update it to the latest version before the lab.
 
 * Double-click the installer file and follow the directions.
 
-### Log into the Claude desktop app
+### Log Into the Claude Desktop App
 
 * Note your organization account email. It should have a format such as `demo-xy@paradigmventures.ai`.
 
@@ -102,7 +103,7 @@ If you have time before the workshop, you can do this setup at home. It will sav
 </p>
 <br>
 
-### Start a Cowork session
+### Start a Cowork Session
 
 * At the top right of the sidebar, make sure **Chat and Cowork** (the speech-bubble icon) is selected.
 
@@ -142,7 +143,7 @@ If you have time before the workshop, you can do this setup at home. It will sav
 </p>
 <br>
 
-### Check that Ollama is running
+### Check That Ollama Is Running
 
 * **Menu bar:** after installing, open the Ollama app. On a Mac, a small llama icon appears in the menu bar at the top right of your screen (on Windows, in the system tray near the clock). If you see it, Ollama is running.
 

@@ -1,6 +1,7 @@
 <!--
 STYLE GUIDE FOR THE LAB GUIDES (this comment doesn't appear in the preview)
 - Headings: one # title per document; ## for main sections; ### for sub-steps.
+- Heading capitalization: Title Case, e.g. "Start a Cowork Session". Capitalize every word except short words (a, an, the, and, or, to, of, in, on, for, as, with) unless they come first.
 - Bullets: * for top-level bullets, - for sub-bullets.
 - Label bullets: start with a bold label and a colon, e.g. **Ollama:** a free tool...
 - Things to click or press: bold, with the exact wording on screen, e.g. click **+ New**, press **Return**.

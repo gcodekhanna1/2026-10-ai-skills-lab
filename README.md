@@ -1,6 +1,6 @@
-# Building AI Skills — WebexOne 2026 Lab Guides
+# Building AI Projects — WebexOne 2026 Lab Guides
 
-Lab guides for the **Building AI Skills** workshop at WebexOne 2026 (October 5, 2026).
+Lab guides for the **Building AI Projects** workshop at WebexOne 2026 (October 5, 2026).
 
 **Open the guides here:** [gcodekhanna1.github.io/2026-10-ai-skills-lab](https://gcodekhanna1.github.io/2026-10-ai-skills-lab/)
 
