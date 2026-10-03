@@ -246,3 +246,4 @@ Or, if the app picks up something that isn't a real task:
 ## What's Next
 
 * **Next:** you've built your Webex Action Center! Continue to [Lab 03 — Build an Image-to-Calendar Assistant](Lab_03_Guide_Image_to_Calendar.html).
+* **Before you leave:** see [How to Save Your Work for Later](Lab_Save_Your_Work.html), so you can pick up where you left off.

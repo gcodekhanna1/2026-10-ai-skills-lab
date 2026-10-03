@@ -449,3 +449,4 @@ You can take the project home and use your own images. The skill to practice is 
 ## What's Next
 
 * **Next:** you've finished all three labs! Your Claude session now knows what you've built and how you like to work, so it's a great place to start your own project, such as a fitness tracker or a portfolio tracker. Or go back to the [Main Menu](https://gcodekhanna1.github.io/2026-10-ai-skills-lab/) to revisit any lab.
+* **Before you leave:** see [How to Save Your Work for Later](Lab_Save_Your_Work.html), so you can pick up where you left off.

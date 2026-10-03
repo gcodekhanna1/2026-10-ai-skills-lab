@@ -252,3 +252,4 @@ If you have time, try improving your Knowledge Base. Make one change at a time a
 ## What's Next
 
 * **Next:** you've built your Knowledge Base! Continue to [Lab 02 — Build a Webex Action Center](Lab_02_Guide_Webex_Action_Center.html).
+* **Before you leave:** see [How to Save Your Work for Later](Lab_Save_Your_Work.html), so you can pick up where you left off.
