@@ -31,7 +31,7 @@ If you have time before the workshop, you can do this setup at home. It will sav
 
 ## Overview of What You Need
 
-* **Laptop:** preferably yours, so you can easily keep all the code and files related to what you built.
+* **Laptop or lab PC:** your choice. Use your own laptop, or a lab PC that already has the Claude desktop app and Ollama installed. Either way, you can take everything you build with you (see [How to Save Your Work for Later](Lab_Save_Your_Work.html)).
 
 * **Organization account:** note your account for the lab, `demo-xy@paradigmventures.ai`, where **xy** is the number on your desk (for example, `demo-07@paradigmventures.ai`).
     - This will be your account for accessing other services throughout this lab.
