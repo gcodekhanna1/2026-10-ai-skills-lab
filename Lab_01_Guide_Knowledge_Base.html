@@ -69,7 +69,7 @@ p.warning{color:#b42318;background:#fef3f2;border:1px solid #fecdca;border-left:
 </ul>
 <br>
 
-<h2>Get Your Sample PDFs Ready</h2>
+<h2>Step 01: Get Your Sample PDFs Ready</h2>
 <p>Do this <strong>before</strong> you send the prompt, so Claude can use the PDFs to test the app it builds.</p>
 <ul>
 <li><strong>Download the sample PDFs:</strong> go to <a href="https://gcodekhanna1.github.io/2026-10-ai-skills-lab/#lab-01">Lab 01 Supporting Materials</a> and click <strong>Download all (.zip)</strong>.</li>
@@ -79,13 +79,13 @@ p.warning{color:#b42318;background:#fef3f2;border:1px solid #fecdca;border-left:
 </ul>
 <br>
 
-<h2>Let's Start Building!</h2>
+<h2>Step 02: Let's Start Building!</h2>
 <ul>
 <li><p><strong>Note:</strong> This is a suggested starting prompt. You are welcome to experiment! We strongly recommend, especially if this is early in your AI vibe-coding / building journey, that you start with this prompt and then make whatever changes you'd like later. Don't worry if you don't understand every term in the prompt: you'll learn as you build.</p>
 </li>
 <li><p><strong>Before you send it:</strong> check that your lab folder is connected to this Cowork session (you picked it in Lab 00). If it isn't, add it again.</p>
 </li>
-<li><p><strong>Heads-up:</strong> Claude takes about 10–15 minutes to build the app. See &quot;While You Wait&quot; below for what to do in the meantime.</p>
+<li><p><strong>Heads-up:</strong> Claude takes about 10–15 minutes to build the app. Stay nearby, since it may pause for your approval. See <strong>Step 03: While You Wait</strong> below for what to do in the meantime.</p>
 </li>
 </ul>
 <h3>Starting Prompt</h3>
@@ -126,10 +126,10 @@ p.warning{color:#b42318;background:#fef3f2;border:1px solid #fecdca;border-left:
 </blockquote>
 <br>
 
-<h2>While You Wait</h2>
-<p>Claude is now building your app. This takes about 10–15 minutes, and Claude shows its progress as it works.</p>
+<h2>Step 03: While You Wait</h2>
+<p>Claude is now building your app. This takes about 10–15 minutes, and Claude shows its progress as it works. <strong>Stay close to your laptop:</strong> Claude sometimes pauses to ask a question or for your permission, and it waits until you answer.</p>
 <ul>
-<li><p><strong>Take a break:</strong> grab a coffee or stretch your legs!</p>
+<li><p><strong>Keep an eye on Claude:</strong> glance at the Claude window every minute or two. If it asks for permission, read the request and click <strong>Allow</strong> (or <strong>Allow for this task</strong>, so it asks less often). If it asks a question, answer it. Nothing moves forward until you do.</p>
 </li>
 <li><p><strong>Download the AI models:</strong> open a terminal window, as in Lab 00 (<strong>Terminal</strong> on a Mac, <strong>PowerShell</strong> on Windows), and run these two commands, one at a time. Together they download about 2.3 GB, so this takes a few minutes.</p>
 </li>
@@ -138,7 +138,9 @@ p.warning{color:#b42318;background:#fef3f2;border:1px solid #fecdca;border-left:
 ollama pull nomic-embed-text
 </code></pre>
 <ul>
-<li><p><strong>Check back every few minutes:</strong> Claude may ask you a question or ask you to approve a step, and it waits until you answer.</p>
+<li><p><strong>Compare notes with your neighbors:</strong> see what their Claude is building, share ideas for what to try once your app runs, or help someone who's stuck.</p>
+</li>
+<li><p><strong>Feel free to take a quick break.</strong> Check the Claude window as soon as you're back.</p>
 </li>
 <li><p><strong>Follow along:</strong> the <strong>Progress</strong> panel on the right of the Claude window lists the steps Claude is working through and highlights the current one.</p>
 </li>
@@ -149,7 +151,7 @@ ollama pull nomic-embed-text
 </p>
 <br>
 
-<h2>Run Your App</h2>
+<h2>Step 04: Run Your App</h2>
 <p>When Claude has finished, your project folder, <code>lab-01-knowledge-base</code>, contains your app, a start file, and two guides: a <strong>Quickstart</strong> (how to start and stop the app) and an <strong>Application Guide</strong> (how the app works).</p>
 <ul>
 <li><strong>Open the Quickstart:</strong> in the <code>lab-01-knowledge-base</code> folder, double-click <code>Quickstart.html</code>. It opens in your browser.</li>
@@ -164,7 +166,7 @@ ollama pull nomic-embed-text
 </p>
 <br>
 
-<h2>Try It</h2>
+<h2>Step 05: Try It</h2>
 <p>Upload these three short PDFs from your <code>Sample PDFs</code> folder, then ask the questions below. Their answers are in the documents, so you can check that the answer matches and that the filename and page number are correct. Citations help you verify an answer, but they don’t automatically make it correct.</p>
 <table>
 <thead>
@@ -206,7 +208,7 @@ ollama pull nomic-embed-text
 </ul>
 <br>
 
-<h2>Understand What You Built</h2>
+<h2>Step 06: Understand What You Built</h2>
 <p>You've just built a small, private search engine for your documents, with an AI model that writes the answers. To see how the pieces fit together, ask Claude (in your Cowork session, not in the app):</p>
 <blockquote>
 <p>Explain in plain English what I just built and how the pieces fit together. Keep it short, and assume I'm new to this.</p>
@@ -214,7 +216,7 @@ ollama pull nomic-embed-text
 <p>For more detail, read &quot;Behind the Scenes&quot; above, or open <code>Application Guide.html</code> in your project folder.</p>
 <br>
 
-<h2>Save What You Learned as a Skill</h2>
+<h2>Step 07: Save What You Learned as a Skill</h2>
 <p>A <strong>skill</strong> is a document that tells Claude how you like things done, so you don't have to explain it again in every session. You heard about skills in the presentation: now you'll build your own, one lab at a time. Send this prompt:</p>
 <blockquote>
 <p>Based on what we just did in Lab 01, write a skill file that describes how I like to build apps: my preferences for how apps are set up, started and documented (for example, a start file, a Quickstart and an Application Guide), how I like things explained, and the practices that worked well. Save it as <code>My Building Skill.md</code> in my lab folder.</p>

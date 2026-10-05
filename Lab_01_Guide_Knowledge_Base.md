@@ -71,7 +71,7 @@ And you can take the code home and keep using it! Once you’ve set up the requi
 
 <br>
 
-## Get Your Sample PDFs Ready
+## Step 01: Get Your Sample PDFs Ready
 
 Do this **before** you send the prompt, so Claude can use the PDFs to test the app it builds.
 
@@ -82,13 +82,13 @@ Do this **before** you send the prompt, so Claude can use the PDFs to test the a
 
 <br>
 
-## Let's Start Building!
+## Step 02: Let's Start Building!
 
 * **Note:** This is a suggested starting prompt. You are welcome to experiment! We strongly recommend, especially if this is early in your AI vibe-coding / building journey, that you start with this prompt and then make whatever changes you'd like later. Don't worry if you don't understand every term in the prompt: you'll learn as you build.
 
 * **Before you send it:** check that your lab folder is connected to this Cowork session (you picked it in Lab 00). If it isn't, add it again.
 
-* **Heads-up:** Claude takes about 10–15 minutes to build the app. See "While You Wait" below for what to do in the meantime.
+* **Heads-up:** Claude takes about 10–15 minutes to build the app. Stay nearby, since it may pause for your approval. See **Step 03: While You Wait** below for what to do in the meantime.
 
 ### Starting Prompt
 
@@ -135,11 +135,11 @@ Do this **before** you send the prompt, so Claude can use the PDFs to test the a
 
 <br>
 
-## While You Wait
+## Step 03: While You Wait
 
-Claude is now building your app. This takes about 10–15 minutes, and Claude shows its progress as it works.
+Claude is now building your app. This takes about 10–15 minutes, and Claude shows its progress as it works. **Stay close to your laptop:** Claude sometimes pauses to ask a question or for your permission, and it waits until you answer.
 
-* **Take a break:** grab a coffee or stretch your legs!
+* **Keep an eye on Claude:** glance at the Claude window every minute or two. If it asks for permission, read the request and click **Allow** (or **Allow for this task**, so it asks less often). If it asks a question, answer it. Nothing moves forward until you do.
 
 * **Download the AI models:** open a terminal window, as in Lab 00 (**Terminal** on a Mac, **PowerShell** on Windows), and run these two commands, one at a time. Together they download about 2.3 GB, so this takes a few minutes.
 
@@ -148,7 +148,9 @@ ollama pull llama3.2:3b
 ollama pull nomic-embed-text
 ```
 
-* **Check back every few minutes:** Claude may ask you a question or ask you to approve a step, and it waits until you answer.
+* **Compare notes with your neighbors:** see what their Claude is building, share ideas for what to try once your app runs, or help someone who's stuck.
+
+* **Feel free to take a quick break.** Check the Claude window as soon as you're back.
 
 * **Follow along:** the **Progress** panel on the right of the Claude window lists the steps Claude is working through and highlights the current one.
 
@@ -158,7 +160,7 @@ ollama pull nomic-embed-text
 </p>
 <br>
 
-## Run Your App
+## Step 04: Run Your App
 
 When Claude has finished, your project folder, `lab-01-knowledge-base`, contains your app, a start file, and two guides: a **Quickstart** (how to start and stop the app) and an **Application Guide** (how the app works).
 
@@ -175,7 +177,7 @@ Here is what an initial result could look like:
 </p>
 <br>
 
-## Try It
+## Step 05: Try It
 
 Upload these three short PDFs from your `Sample PDFs` folder, then ask the questions below. Their answers are in the documents, so you can check that the answer matches and that the filename and page number are correct. Citations help you verify an answer, but they don’t automatically make it correct.
 
@@ -197,7 +199,7 @@ Use these checks to see whether your MVP is working:
 
 <br>
 
-## Understand What You Built
+## Step 06: Understand What You Built
 
 You've just built a small, private search engine for your documents, with an AI model that writes the answers. To see how the pieces fit together, ask Claude (in your Cowork session, not in the app):
 
@@ -207,7 +209,7 @@ For more detail, read "Behind the Scenes" above, or open `Application Guide.html
 
 <br>
 
-## Save What You Learned as a Skill
+## Step 07: Save What You Learned as a Skill
 
 A **skill** is a document that tells Claude how you like things done, so you don't have to explain it again in every session. You heard about skills in the presentation: now you'll build your own, one lab at a time. Send this prompt:
 

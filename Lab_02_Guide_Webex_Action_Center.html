@@ -66,13 +66,13 @@ p.warning{color:#b42318;background:#fef3f2;border:1px solid #fecdca;border-left:
 </ul>
 <br>
 
-<h2>Let's Start Building!</h2>
+<h2>Step 01: Let's Start Building!</h2>
 <ul>
 <li><p><strong>Note:</strong> This is a suggested starting prompt. You are welcome to experiment! We strongly recommend, especially if this is early in your AI vibe-coding / building journey, that you start with this prompt and then make whatever changes you'd like later. Don't worry if you don't understand every term in the prompt: you'll learn as you build.</p>
 </li>
 <li><p><strong>Before you send it:</strong> check that your lab folder is connected to this Cowork session (you picked it in Lab 00). If it isn't, add it again.</p>
 </li>
-<li><p><strong>Heads-up:</strong> Claude takes about 10–15 minutes to build the app. See &quot;While You Wait&quot; below for what to do in the meantime.</p>
+<li><p><strong>Heads-up:</strong> Claude takes about 10–15 minutes to build the app. Stay nearby, since it may pause for your approval. See <strong>Step 02: While You Wait</strong> below for what to do in the meantime.</p>
 </li>
 </ul>
 <h3>Starting Prompt</h3>
@@ -111,16 +111,19 @@ p.warning{color:#b42318;background:#fef3f2;border:1px solid #fecdca;border-left:
 </blockquote>
 <br>
 
-<h2>While You Wait</h2>
-<p>Claude is now building your app. This takes about 10–15 minutes, and Claude shows its progress as it works.</p>
+<h2>Step 02: While You Wait</h2>
+<p>Claude is now building your app. This takes about 10–15 minutes, and Claude shows its progress as it works. <strong>Stay close to your laptop:</strong> Claude sometimes pauses to ask a question or for your permission, and it waits until you answer.</p>
 <ul>
-<li><strong>Take a break:</strong> grab a coffee or stretch your legs!</li>
+<li><strong>Keep an eye on Claude:</strong> glance at the Claude window every minute or two. If it asks for permission, read the request and click <strong>Allow</strong> (or <strong>Allow for this task</strong>, so it asks less often). If it asks a question, answer it. Nothing moves forward until you do.</li>
 <li><strong>Download the AI model:</strong> open a terminal window (<strong>Terminal</strong> on a Mac, <strong>PowerShell</strong> on Windows) and run this command. It's the biggest download of the day (several GB), so start it now. If your laptop has only 8 GB of memory, download <code>qwen3.5:4b</code> instead.</li>
 </ul>
 <pre><code class="language-sh">ollama pull qwen3.5:9b
 </code></pre>
 <ul>
-<li><strong>Check back every few minutes:</strong> Claude may ask you a question or ask you to approve a step, and it waits until you answer.</li>
+<li><p><strong>Compare notes with your neighbors:</strong> see what their Claude is building, share ideas for what to try once your app runs, or help someone who's stuck.</p>
+</li>
+<li><p><strong>Feel free to take a quick break.</strong> Check the Claude window as soon as you're back.</p>
+</li>
 </ul>
 <h3>Get Your Webex Access Token</h3>
 <ul>
@@ -143,7 +146,7 @@ p.warning{color:#b42318;background:#fef3f2;border:1px solid #fecdca;border-left:
 </ul>
 <br>
 
-<h2>Run Your App</h2>
+<h2>Step 03: Run Your App</h2>
 <p>When Claude has finished, your project folder, <code>lab-02-action-center</code>, contains your app, a start file, and two guides: a <strong>Quickstart</strong> (how to start and stop the app) and an <strong>Application Guide</strong> (how the app works).</p>
 <ul>
 <li><strong>Open the Quickstart:</strong> in the <code>lab-02-action-center</code> folder, double-click <code>Quickstart.html</code>. It opens in your browser.</li>
@@ -158,7 +161,7 @@ p.warning{color:#b42318;background:#fef3f2;border:1px solid #fecdca;border-left:
 </p>
 <br>
 
-<h2>Try It</h2>
+<h2>Step 04: Try It</h2>
 <p>Start by clicking <strong>Sync and analyze</strong> and picking a space where you know there's an open ask or commitment. Check that the extracted task matches what was actually said, and that the evidence quote is the right message. Evidence helps you verify a task, but it doesn't automatically make it correct.</p>
 <p>Use these checks to see whether your MVP is working:</p>
 <ul>
@@ -176,7 +179,7 @@ p.warning{color:#b42318;background:#fef3f2;border:1px solid #fecdca;border-left:
 </ul>
 <br>
 
-<h2>Understand What You Built</h2>
+<h2>Step 05: Understand What You Built</h2>
 <p>Your app just did something new: it called a real service's API (Webex) with your own access token, then had a private AI model on your laptop read the results. To see how the pieces fit together, ask Claude (in your Cowork session, not in the app):</p>
 <blockquote>
 <p>Explain in plain English what I just built and how the pieces fit together. Keep it short, and assume I'm new to this.</p>
@@ -184,7 +187,7 @@ p.warning{color:#b42318;background:#fef3f2;border:1px solid #fecdca;border-left:
 <p>For more detail, read &quot;Behind the Scenes&quot; above, or open <code>Application Guide.html</code> in your project folder.</p>
 <br>
 
-<h2>Save What You Learned as a Skill</h2>
+<h2>Step 06: Save What You Learned as a Skill</h2>
 <p>Add what you learned in this lab to the skill file you started in Lab 01, <code>My Building Skill.md</code>. Send this prompt:</p>
 <blockquote>
 <p>Update <code>My Building Skill.md</code> in my lab folder with what we learned in Lab 02, such as working with an outside service's API, keeping my access token private, and checking the AI's results against the evidence. Keep everything that's already in the file. If the file doesn't exist yet, create it.</p>

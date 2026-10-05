@@ -68,13 +68,13 @@ And you can take the code home and keep using it! Once you've set up the require
 
 <br>
 
-## Let's Start Building!
+## Step 01: Let's Start Building!
 
 * **Note:** This is a suggested starting prompt. You are welcome to experiment! We strongly recommend, especially if this is early in your AI vibe-coding / building journey, that you start with this prompt and then make whatever changes you'd like later. Don't worry if you don't understand every term in the prompt: you'll learn as you build.
 
 * **Before you send it:** check that your lab folder is connected to this Cowork session (you picked it in Lab 00). If it isn't, add it again.
 
-* **Heads-up:** Claude takes about 10–15 minutes to build the app. See "While You Wait" below for what to do in the meantime.
+* **Heads-up:** Claude takes about 10–15 minutes to build the app. Stay nearby, since it may pause for your approval. See **Step 02: While You Wait** below for what to do in the meantime.
 
 ### Starting Prompt
 
@@ -116,18 +116,20 @@ And you can take the code home and keep using it! Once you've set up the require
 
 <br>
 
-## While You Wait
+## Step 02: While You Wait
 
-Claude is now building your app. This takes about 10–15 minutes, and Claude shows its progress as it works.
+Claude is now building your app. This takes about 10–15 minutes, and Claude shows its progress as it works. **Stay close to your laptop:** Claude sometimes pauses to ask a question or for your permission, and it waits until you answer.
 
-* **Take a break:** grab a coffee or stretch your legs!
+* **Keep an eye on Claude:** glance at the Claude window every minute or two. If it asks for permission, read the request and click **Allow** (or **Allow for this task**, so it asks less often). If it asks a question, answer it. Nothing moves forward until you do.
 * **Download the AI model:** open a terminal window (**Terminal** on a Mac, **PowerShell** on Windows) and run this command. It's the biggest download of the day (several GB), so start it now. If your laptop has only 8 GB of memory, download `qwen3.5:4b` instead.
 
 ```sh
 ollama pull qwen3.5:9b
 ```
 
-* **Check back every few minutes:** Claude may ask you a question or ask you to approve a step, and it waits until you answer.
+* **Compare notes with your neighbors:** see what their Claude is building, share ideas for what to try once your app runs, or help someone who's stuck.
+
+* **Feel free to take a quick break.** Check the Claude window as soon as you're back.
 
 ### Get Your Webex Access Token
 
@@ -149,7 +151,7 @@ ollama pull qwen3.5:9b
 
 <br>
 
-## Run Your App
+## Step 03: Run Your App
 
 When Claude has finished, your project folder, `lab-02-action-center`, contains your app, a start file, and two guides: a **Quickstart** (how to start and stop the app) and an **Application Guide** (how the app works).
 
@@ -166,7 +168,7 @@ Here is what an initial result could look like:
 </p>
 <br>
 
-## Try It
+## Step 04: Try It
 
 Start by clicking **Sync and analyze** and picking a space where you know there's an open ask or commitment. Check that the extracted task matches what was actually said, and that the evidence quote is the right message. Evidence helps you verify a task, but it doesn't automatically make it correct.
 
@@ -186,7 +188,7 @@ Use these checks to see whether your MVP is working:
 
 <br>
 
-## Understand What You Built
+## Step 05: Understand What You Built
 
 Your app just did something new: it called a real service's API (Webex) with your own access token, then had a private AI model on your laptop read the results. To see how the pieces fit together, ask Claude (in your Cowork session, not in the app):
 
@@ -196,7 +198,7 @@ For more detail, read "Behind the Scenes" above, or open `Application Guide.html
 
 <br>
 
-## Save What You Learned as a Skill
+## Step 06: Save What You Learned as a Skill
 
 Add what you learned in this lab to the skill file you started in Lab 01, `My Building Skill.md`. Send this prompt:
 

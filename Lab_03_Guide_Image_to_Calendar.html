@@ -35,7 +35,7 @@ p.warning{color:#b42318;background:#fef3f2;border:1px solid #fecdca;border-left:
 <p>Your app may look and work a little differently from the examples—or from the apps built by others in the lab. That's expected! AI coding tools can suggest different approaches, and there are many ways to solve the same problem.</p>
 <p><strong>How this lab works:</strong></p>
 <ul>
-<li><strong>Required:</strong> build the first version and check one event end to end, from the image to your calendar. That's everything from &quot;Let's Start Building!&quot; to &quot;Key Takeaways&quot;.</li>
+<li><strong>Required:</strong> build the first version and check one event end to end, from the image to your calendar. That's <strong>Steps 01–07</strong>, from &quot;Get Your Images Ready&quot; to &quot;Save What You Learned as a Skill&quot;.</li>
 <li><strong>Optional:</strong> everything after that: improvement rounds, investigating failures, and ideas for going further. Pick what interests you, or move on to your own project. Both are great uses of your time.</li>
 </ul>
 <br>
@@ -70,7 +70,7 @@ p.warning{color:#b42318;background:#fef3f2;border:1px solid #fecdca;border-left:
 </ul>
 <br>
 
-<h2>Get Your Images Ready</h2>
+<h2>Step 01: Get Your Images Ready</h2>
 <p>Do this <strong>before</strong> you send the prompt. Download both images from <a href="https://gcodekhanna1.github.io/2026-10-ai-skills-lab/#lab-03">Lab 03 Supporting Materials</a>:</p>
 <ul>
 <li><strong>App screenshot:</strong> <code>Lab_03_App_Preview_Screenshot.png</code>, the picture of the app you'll attach to the prompt.</li>
@@ -79,7 +79,7 @@ p.warning{color:#b42318;background:#fef3f2;border:1px solid #fecdca;border-left:
 </ul>
 <br>
 
-<h2>Let's Start Building!</h2>
+<h2>Step 02: Let's Start Building!</h2>
 <ul>
 <li><p><strong>Note:</strong> This is a suggested starting prompt. You are welcome to experiment! We strongly recommend, especially if this is early in your AI vibe-coding / building journey, that you start with this prompt and then make whatever changes you'd like later. Don't worry if you don't understand every term in the prompt: you'll learn as you build.</p>
 </li>
@@ -89,7 +89,7 @@ p.warning{color:#b42318;background:#fef3f2;border:1px solid #fecdca;border-left:
 <li>Attach <code>Lab_03_App_Preview_Screenshot.png</code>: drag the file into Claude's message box (or use the attach button), and check that it appears as an attachment before you send.</li>
 </ul>
 </li>
-<li><p><strong>Heads-up:</strong> Claude takes about 10–15 minutes to build the app. See &quot;While You Wait&quot; below for what to do in the meantime.</p>
+<li><p><strong>Heads-up:</strong> Claude takes about 10–15 minutes to build the app. Stay nearby, since it may pause for your approval. See <strong>Step 03: While You Wait</strong> below for what to do in the meantime.</p>
 </li>
 </ul>
 <p>Here's the app screenshot. It shows the layout: source image on the left, review and editing in the middle, and preview, confirmation, and download on the right. The event details in it are only an example, not values to build into your app.</p>
@@ -129,21 +129,23 @@ p.warning{color:#b42318;background:#fef3f2;border:1px solid #fecdca;border-left:
 </blockquote>
 <br>
 
-<h2>While You Wait</h2>
-<p>Claude is now building your app. This takes about 10–15 minutes, and Claude shows its progress as it works.</p>
+<h2>Step 03: While You Wait</h2>
+<p>Claude is now building your app. This takes about 10–15 minutes, and Claude shows its progress as it works. <strong>Stay close to your laptop:</strong> Claude sometimes pauses to ask a question or for your permission, and it waits until you answer.</p>
 <ul>
-<li><strong>Take a break:</strong> grab a coffee or stretch your legs!</li>
-<li><strong>Write your answer sheet:</strong> open <code>Lab_03_sample_poster.png</code> and write down the details you'd expect in a calendar entry: title, date, start and end times, time zone, and location. You'll use this in &quot;Try It&quot; to check the AI.</li>
+<li><strong>Keep an eye on Claude:</strong> glance at the Claude window every minute or two. If it asks for permission, read the request and click <strong>Allow</strong> (or <strong>Allow for this task</strong>, so it asks less often). If it asks a question, answer it. Nothing moves forward until you do.</li>
 <li><strong>Check your model:</strong> there's nothing new to download. If you skipped Lab 02, open a terminal window (<strong>Terminal</strong> on a Mac, <strong>PowerShell</strong> on Windows) and run this command now:</li>
 </ul>
 <pre><code class="language-sh">ollama pull qwen3.5:9b
 </code></pre>
 <ul>
-<li><strong>Check back every few minutes:</strong> Claude may ask you a question or ask you to approve a step, and it waits until you answer.</li>
+<li><p><strong>Compare notes with your neighbors:</strong> see what their Claude is building, share ideas for what to try once your app runs, or help someone who's stuck.</p>
+</li>
+<li><p><strong>Feel free to take a quick break.</strong> Check the Claude window as soon as you're back.</p>
+</li>
 </ul>
 <br>
 
-<h2>Run Your App</h2>
+<h2>Step 04: Run Your App</h2>
 <p>When Claude has finished, your project folder, <code>lab-03-image-to-calendar</code>, contains your app, a start file, and two guides: a <strong>Quickstart</strong> (how to start and stop the app) and an <strong>Application Guide</strong> (how the app works).</p>
 <ul>
 <li><strong>Open the Quickstart:</strong> in the <code>lab-03-image-to-calendar</code> folder, double-click <code>Quickstart.html</code>. It opens in your browser.</li>
@@ -161,11 +163,11 @@ p.warning{color:#b42318;background:#fef3f2;border:1px solid #fecdca;border-left:
 <p>Compare your running app with the screenshot you gave Claude. Can you find the upload area, the editable details, and the confirmation controls?</p>
 <br>
 
-<h2>Try It: Check One Event End to End</h2>
-<p>Use the answer sheet you wrote while Claude was building. (If you skipped it, write down the details you expect for the sample poster below before you test.)</p>
+<h2>Step 05: Try It: Check One Event End to End</h2>
+<p>Test your app with the sample poster, and compare its answers with the expected values in the table below.</p>
 <ul>
 <li><strong>Upload</strong> <code>Lab_03_sample_poster.png</code> in your app and click the button to extract the event details.</li>
-<li><strong>Compare</strong> every field with the answer sheet, and read the app's notes about anything uncertain.</li>
+<li><strong>Compare</strong> every field with the expected values in the table below, and read the app's notes about anything uncertain.</li>
 <li><strong>Correct</strong> any differences, tick the review box, click <strong>Confirm event</strong>, and <strong>download</strong> the <code>.ics</code> file.</li>
 <li><strong>Import</strong> the file into your calendar and check the event.</li>
 </ul>
@@ -212,10 +214,10 @@ p.warning{color:#b42318;background:#fef3f2;border:1px solid #fecdca;border-left:
 <li><strong>Make the end time earlier than the start:</strong> the app should refuse to confirm.</li>
 </ul>
 <p>Your app should also include its own fictional sample and a labeled offline review demo, because the prompt asks for both. The review demo uses prefilled data to practice editing and exporting without AI, so it doesn't test whether the model can read images.</p>
-<p><strong>Discuss:</strong> Which fields did the model read correctly? Which did you fix? Would a plausible-looking error have escaped your notice without the answer sheet?</p>
+<p><strong>Discuss:</strong> Which fields did the model read correctly? Which did you fix? Would a plausible-looking error have escaped your notice without the expected values?</p>
 <br>
 
-<h2>Understand What You Built</h2>
+<h2>Step 06: Understand What You Built</h2>
 <p>This time, the AI model on your laptop read a picture, not just text, and your app made sure a person checks its work before anything reaches a calendar. To see how the pieces fit together, ask Claude (in your Cowork session, not in the app):</p>
 <blockquote>
 <p>Explain in plain English what I just built and how the pieces fit together. Keep it short, and assume I'm new to this.</p>
@@ -223,7 +225,7 @@ p.warning{color:#b42318;background:#fef3f2;border:1px solid #fecdca;border-left:
 <p>For more detail, read &quot;Behind the Scenes&quot; above, or open <code>Application Guide.html</code> in your project folder.</p>
 <br>
 
-<h2>Save What You Learned as a Skill</h2>
+<h2>Step 07: Save What You Learned as a Skill</h2>
 <p>Add what you learned in this lab to your skill file, <code>My Building Skill.md</code>. Send this prompt:</p>
 <blockquote>
 <p>Update <code>My Building Skill.md</code> in my lab folder with what we learned in Lab 03, such as giving you a screenshot of the design I want, and keeping a person in the loop to check the AI's work before anything is saved or sent. Keep everything that's already in the file. If the file doesn't exist yet, create it.</p>

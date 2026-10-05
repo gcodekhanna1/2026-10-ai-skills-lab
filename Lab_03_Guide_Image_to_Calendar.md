@@ -33,7 +33,7 @@ Your app may look and work a little differently from the examples—or from the 
 
 **How this lab works:**
 
-* **Required:** build the first version and check one event end to end, from the image to your calendar. That's everything from "Let's Start Building!" to "Key Takeaways".
+* **Required:** build the first version and check one event end to end, from the image to your calendar. That's **Steps 01–07**, from "Get Your Images Ready" to "Save What You Learned as a Skill".
 * **Optional:** everything after that: improvement rounds, investigating failures, and ideas for going further. Pick what interests you, or move on to your own project. Both are great uses of your time.
 
 <br>
@@ -70,7 +70,7 @@ The app is designed so that **a blank field is better than a wrong one**: if the
 
 <br>
 
-## Get Your Images Ready
+## Step 01: Get Your Images Ready
 
 Do this **before** you send the prompt. Download both images from [Lab 03 Supporting Materials](https://gcodekhanna1.github.io/2026-10-ai-skills-lab/#lab-03):
 
@@ -80,7 +80,7 @@ Do this **before** you send the prompt. Download both images from [Lab 03 Suppor
 
 <br>
 
-## Let's Start Building!
+## Step 02: Let's Start Building!
 
 * **Note:** This is a suggested starting prompt. You are welcome to experiment! We strongly recommend, especially if this is early in your AI vibe-coding / building journey, that you start with this prompt and then make whatever changes you'd like later. Don't worry if you don't understand every term in the prompt: you'll learn as you build.
 
@@ -88,7 +88,7 @@ Do this **before** you send the prompt. Download both images from [Lab 03 Suppor
     - Check that your lab folder is connected to this Cowork session (you picked it in Lab 00). If it isn't, add it again.
     - Attach `Lab_03_App_Preview_Screenshot.png`: drag the file into Claude's message box (or use the attach button), and check that it appears as an attachment before you send.
 
-* **Heads-up:** Claude takes about 10–15 minutes to build the app. See "While You Wait" below for what to do in the meantime.
+* **Heads-up:** Claude takes about 10–15 minutes to build the app. Stay nearby, since it may pause for your approval. See **Step 03: While You Wait** below for what to do in the meantime.
 
 Here's the app screenshot. It shows the layout: source image on the left, review and editing in the middle, and preview, confirmation, and download on the right. The event details in it are only an example, not values to build into your app.
 
@@ -138,23 +138,24 @@ You'll use **two different kinds of images** in this lab: the app screenshot hel
 
 <br>
 
-## While You Wait
+## Step 03: While You Wait
 
-Claude is now building your app. This takes about 10–15 minutes, and Claude shows its progress as it works.
+Claude is now building your app. This takes about 10–15 minutes, and Claude shows its progress as it works. **Stay close to your laptop:** Claude sometimes pauses to ask a question or for your permission, and it waits until you answer.
 
-* **Take a break:** grab a coffee or stretch your legs!
-* **Write your answer sheet:** open `Lab_03_sample_poster.png` and write down the details you'd expect in a calendar entry: title, date, start and end times, time zone, and location. You'll use this in "Try It" to check the AI.
+* **Keep an eye on Claude:** glance at the Claude window every minute or two. If it asks for permission, read the request and click **Allow** (or **Allow for this task**, so it asks less often). If it asks a question, answer it. Nothing moves forward until you do.
 * **Check your model:** there's nothing new to download. If you skipped Lab 02, open a terminal window (**Terminal** on a Mac, **PowerShell** on Windows) and run this command now:
 
 ```sh
 ollama pull qwen3.5:9b
 ```
 
-* **Check back every few minutes:** Claude may ask you a question or ask you to approve a step, and it waits until you answer.
+* **Compare notes with your neighbors:** see what their Claude is building, share ideas for what to try once your app runs, or help someone who's stuck.
+
+* **Feel free to take a quick break.** Check the Claude window as soon as you're back.
 
 <br>
 
-## Run Your App
+## Step 04: Run Your App
 
 When Claude has finished, your project folder, `lab-03-image-to-calendar`, contains your app, a start file, and two guides: a **Quickstart** (how to start and stop the app) and an **Application Guide** (how the app works).
 
@@ -175,12 +176,12 @@ Compare your running app with the screenshot you gave Claude. Can you find the u
 
 <br>
 
-## Try It: Check One Event End to End
+## Step 05: Try It: Check One Event End to End
 
-Use the answer sheet you wrote while Claude was building. (If you skipped it, write down the details you expect for the sample poster below before you test.)
+Test your app with the sample poster, and compare its answers with the expected values in the table below.
 
 * **Upload** `Lab_03_sample_poster.png` in your app and click the button to extract the event details.
-* **Compare** every field with the answer sheet, and read the app's notes about anything uncertain.
+* **Compare** every field with the expected values in the table below, and read the app's notes about anything uncertain.
 * **Correct** any differences, tick the review box, click **Confirm event**, and **download** the `.ics` file.
 * **Import** the file into your calendar and check the event.
 
@@ -207,11 +208,11 @@ Two quick checks of the safety rules:
 
 Your app should also include its own fictional sample and a labeled offline review demo, because the prompt asks for both. The review demo uses prefilled data to practice editing and exporting without AI, so it doesn't test whether the model can read images.
 
-**Discuss:** Which fields did the model read correctly? Which did you fix? Would a plausible-looking error have escaped your notice without the answer sheet?
+**Discuss:** Which fields did the model read correctly? Which did you fix? Would a plausible-looking error have escaped your notice without the expected values?
 
 <br>
 
-## Understand What You Built
+## Step 06: Understand What You Built
 
 This time, the AI model on your laptop read a picture, not just text, and your app made sure a person checks its work before anything reaches a calendar. To see how the pieces fit together, ask Claude (in your Cowork session, not in the app):
 
@@ -221,7 +222,7 @@ For more detail, read "Behind the Scenes" above, or open `Application Guide.html
 
 <br>
 
-## Save What You Learned as a Skill
+## Step 07: Save What You Learned as a Skill
 
 Add what you learned in this lab to your skill file, `My Building Skill.md`. Send this prompt:
 
