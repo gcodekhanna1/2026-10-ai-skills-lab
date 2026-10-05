@@ -12,3 +12,4 @@ Start with Lab 00, then work through the labs in order:
 * **Lab 03:** build an Image to Calendar assistant that turns an event flyer into a calendar entry.
 
 Each guide is available as a web page (`.html`) and a PDF. This repository is updated from the workshop's working folder, so please don't edit files here directly.
+
