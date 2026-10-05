@@ -1,4 +1,4 @@
-# Building AI Projects Workshop — Session 2
+# Building AI Projects Workshop — Session 2 — Tuesday
 
 *Participant list and demo account assignments. Find your name to see your demo account.*
 
