@@ -71,6 +71,8 @@ If you have time before the workshop, you can do this setup at home. It will sav
 
 *✅ You can do this step before the lab.*
 
+* **Using a lab PC?** The Claude desktop app is already installed. Skip to Step 03.
+
 * If you have not done so already, install the Claude desktop app from [claude.com/download](https://claude.com/download).
     - **Already have it?** Update it to the latest version before the lab.
 
@@ -81,6 +83,8 @@ If you have time before the workshop, you can do this setup at home. It will sav
 ## Step 03: Install Ollama
 
 *✅ You can do this step before the lab.*
+
+* **Using a lab PC?** Ollama is already installed. Skip to **Check That Ollama Is Running** below.
 
 * Download and install Ollama for your operating system from [ollama.com/download](https://ollama.com/download).
 
