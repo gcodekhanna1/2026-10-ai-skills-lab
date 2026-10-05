@@ -25,6 +25,8 @@ If you have time before the workshop, you can do this setup at home. It will sav
 
 * **All guides and materials:** [gcodekhanna1.github.io/2026-10-ai-skills-lab](https://gcodekhanna1.github.io/2026-10-ai-skills-lab/). Each guide is a web page, with a PDF version to print or save.
 
+* **Short on time?** Steps 01–03 can be done before the lab. Steps 04–07 are done in the lab, once you have your desk number.
+
 <br>
 
 ## Overview of What You Need
@@ -48,7 +50,9 @@ If you have time before the workshop, you can do this setup at home. It will sav
 
 <br>
 
-## Create a Folder for Your Lab Files
+## Step 01: Create a Folder for Your Lab Files
+
+*✅ You can do this step before the lab.*
 
 <p class="warning">⚠️ Make sure to create this folder in your computer's home folder (the folder with your user name). Do NOT create it in OneDrive, Dropbox, Box, Google Drive or iCloud Drive. We have found that the constant syncing of these cloud-based folders breaks the build. The Desktop or Documents folder is OK as long as it isn't being synced by a cloud service.</p>
 
@@ -61,19 +65,66 @@ If you have time before the workshop, you can do this setup at home. It will sav
 * **Why not a synced folder?** While Claude builds, it creates thousands of small files. A sync app trying to upload them at the same time can lock files and break the build. Desktop and Documents are often synced without you noticing (by iCloud on a Mac, or OneDrive on many work laptops), which is why we use your home folder.
     - **Quick check:** if the folder's location includes "OneDrive", "Dropbox", "Box", "Google Drive" or "iCloud", move it.
 
-
 <br>
 
-## Claude Desktop App
+## Step 02: Install the Claude Desktop App
 
-### Install the Claude Desktop App
+*✅ You can do this step before the lab.*
 
 * If you have not done so already, install the Claude desktop app from [claude.com/download](https://claude.com/download).
     - **Already have it?** Update it to the latest version before the lab.
 
 * Double-click the installer file and follow the directions.
 
-### Log Into the Claude Desktop App
+<br>
+
+## Step 03: Install Ollama
+
+*✅ You can do this step before the lab.*
+
+* Download and install Ollama for your operating system from [ollama.com/download](https://ollama.com/download).
+
+<br>
+<p align="center">
+  <img src="Lab_00_Ollama_Install_Screenshot.png" alt="Ollama install screenshot" width="60%">
+</p>
+<br>
+
+### Check That Ollama Is Running
+
+* **Menu bar:** after installing, open the Ollama app. On a Mac, a small llama icon appears in the menu bar at the top right of your screen (on Windows, in the system tray near the clock). If you see it, Ollama is running.
+
+* **Terminal:** you can also check from a terminal window, a text window where you type commands. You'll use it in every lab.
+    - **Mac:** press **⌘ + Space**, type **Terminal**, and press **Return**.
+    - **Windows:** click **Start**, type **PowerShell**, and press **Enter**.
+    - Type the following command and press **Return** (or **Enter**):
+
+```sh
+ollama --version
+```
+
+* You should see a line like `ollama version is 0.x.x`. If you see `command not found` instead, open the Ollama app once and try again.
+
+* Ollama starts with no AI models installed. Each lab will tell you which model to download when you need it.
+
+<br>
+
+## Step 04: Open Your Email
+
+*🏫 Do this step in the lab, once you have your desk number.*
+
+* **Why now:** when you log into Claude in the next step, Claude emails you a sign-in link. With your email already open, you can click it right away.
+
+* Open the email account you registered for the workshop with (work or personal) **on this same computer**, in a web browser or your email app.
+    - **Using a lab PC?** Sign in to your email in a web browser.
+
+* Keep it open, and continue to Step 05.
+
+<br>
+
+## Step 05: Log Into the Claude Desktop App
+
+*🏫 Do this step in the lab, once you have your desk number.*
 
 * Note your organization account email. It should have a format such as `demo-xy@paradigmventures.ai`.
 
@@ -85,7 +136,7 @@ If you have time before the workshop, you can do this setup at home. It will sav
 </p>
 <br>
 
-* Log into your email account and look for the verification link, which should look like the screenshot below. **Open the link on the same laptop where you're running Claude.**
+* Go back to your email (from Step 04) and look for the verification link, which should look like the screenshot below. It can take a minute to arrive; if you don't see it, check your spam or junk folder. **Open the link on the same laptop where you're running Claude.**
     - **Note:** your work or personal email was added as a forwarding address in your Outlook account.
     - **Asked for a code?** Claude's screen may mention a code, but the email contains a sign-in **link** instead. Just click the link.
 
@@ -103,7 +154,11 @@ If you have time before the workshop, you can do this setup at home. It will sav
 </p>
 <br>
 
-### Start a Cowork Session
+<br>
+
+## Step 06: Start a Cowork Session
+
+*🏫 Do this step in the lab, once you have your desk number.*
 
 * At the top right of the sidebar, make sure **Chat and Cowork** (the speech-bubble icon) is selected.
 
@@ -133,36 +188,9 @@ If you have time before the workshop, you can do this setup at home. It will sav
 
 <br>
 
-## Install Ollama
+## Step 07: Access Webex Messaging
 
-* Download and install Ollama for your operating system from [ollama.com/download](https://ollama.com/download).
-
-<br>
-<p align="center">
-  <img src="Lab_00_Ollama_Install_Screenshot.png" alt="Ollama install screenshot" width="60%">
-</p>
-<br>
-
-### Check That Ollama Is Running
-
-* **Menu bar:** after installing, open the Ollama app. On a Mac, a small llama icon appears in the menu bar at the top right of your screen (on Windows, in the system tray near the clock). If you see it, Ollama is running.
-
-* **Terminal:** you can also check from a terminal window, a text window where you type commands. You'll use it in every lab.
-    - **Mac:** press **⌘ + Space**, type **Terminal**, and press **Return**.
-    - **Windows:** click **Start**, type **PowerShell**, and press **Enter**.
-    - Type the following command and press **Return** (or **Enter**):
-
-```sh
-ollama --version
-```
-
-* You should see a line like `ollama version is 0.x.x`. If you see `command not found` instead, open the Ollama app once and try again.
-
-* Ollama starts with no AI models installed. Each lab will tell you which model to download when you need it.
-
-<br>
-
-## Access Webex Messaging
+*🏫 Do this step in the lab, once you have your desk number.*
 
 * **Why now:** you won't need Webex until Lab 02, but once you're signed in, the lab team can send you files and help directly in Webex if you get stuck.
 
