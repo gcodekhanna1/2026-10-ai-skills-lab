@@ -29,14 +29,15 @@ p.warning{color:#b42318;background:#fef3f2;border:1px solid #fecdca;border-left:
 <h2>Introduction</h2>
 <p>We get events in all kinds of formats: flyers, posters, screenshots, photos of a whiteboard. Typing them into a calendar is slow, and it's easy to get a date or time wrong. In this lab, you'll build an app that reads an image of an event, suggests the calendar details, lets you check and correct them, and creates a calendar file only after you confirm. You'll also meet a new kind of AI model: one that can read images, running privately on your laptop.</p>
 <p>In Lab 01, you worked with information in documents. In Lab 02, you turned conversation text into suggested actions. The goal of this lab is the same: build a minimum viable product (MVP), a simple working version that does the main job, then improve it if you want to.</p>
+<p><strong>This lab is optional:</strong> Labs 01 and 02 are the core. Lab 03 is one of two paths after them; the other is <a href="Lab_04_Guide_Build_Your_Own_Project.html">Lab 04 — Build Your Own Project</a>.</p>
 <br>
 
 <h2>Before You Start</h2>
 <p>Your app may look and work a little differently from the examples—or from the apps built by others in the lab. That's expected! AI coding tools can suggest different approaches, and there are many ways to solve the same problem.</p>
 <p><strong>How this lab works:</strong></p>
 <ul>
-<li><strong>Required:</strong> build the first version and check one event end to end, from the image to your calendar. That's <strong>Steps 01–07</strong>, from &quot;Get Your Images Ready&quot; to &quot;Save What You Learned as a Skill&quot;.</li>
-<li><strong>Optional:</strong> everything after that: improvement rounds, investigating failures, and ideas for going further. Pick what interests you, or move on to your own project. Both are great uses of your time.</li>
+<li><strong>Main part:</strong> build the first version and check one event end to end, from the image to your calendar. That's <strong>Steps 01–07</strong>, from &quot;Get Your Images Ready&quot; to &quot;Save What You Learned as a Skill&quot;.</li>
+<li><strong>Optional:</strong> everything after that: improvement rounds, investigating failures, and ideas for going further. Pick what interests you, or move on to <a href="Lab_04_Guide_Build_Your_Own_Project.html">Lab 04 — Build Your Own Project</a>. Both are great uses of your time.</li>
 </ul>
 <br>
 
@@ -132,8 +133,10 @@ p.warning{color:#b42318;background:#fef3f2;border:1px solid #fecdca;border-left:
 <h2>Step 03: While You Wait</h2>
 <p>Claude is now building your app. This takes about 10–15 minutes, and Claude shows its progress as it works. <strong>Stay close to your laptop:</strong> Claude sometimes pauses to ask a question or for your permission, and it waits until you answer.</p>
 <ul>
-<li><strong>Keep an eye on Claude:</strong> glance at the Claude window every minute or two. If it asks for permission, read the request and click <strong>Allow</strong> (or <strong>Allow for this task</strong>, so it asks less often). If it asks a question, answer it. Nothing moves forward until you do.</li>
-<li><strong>Check your model:</strong> there's nothing new to download. If you skipped Lab 02, open a terminal window (<strong>Terminal</strong> on a Mac, <strong>PowerShell</strong> on Windows) and run this command now:</li>
+<li><p><strong>Keep an eye on Claude:</strong> glance at the Claude window every minute or two. If it asks for permission, read the request and click <strong>Allow</strong> (or <strong>Allow for this task</strong>, so it asks less often). If it asks a question, answer it. Nothing moves forward until you do.</p>
+</li>
+<li><p><strong>Check your model:</strong> there's nothing new to download. If you skipped Lab 02, open a terminal window (<strong>Terminal</strong> on a Mac, <strong>PowerShell</strong> on Windows) and run this command now:</p>
+</li>
 </ul>
 <pre><code class="language-sh">ollama pull qwen3.5:9b
 </code></pre>
@@ -167,7 +170,7 @@ p.warning{color:#b42318;background:#fef3f2;border:1px solid #fecdca;border-left:
 <p>Test your app with the sample poster, and compare its answers with the expected values in the table below.</p>
 <ul>
 <li><strong>Upload</strong> <code>Lab_03_sample_poster.png</code> in your app and click the button to extract the event details.</li>
-<li><strong>Compare</strong> every field with the expected values in the table below, and read the app's notes about anything uncertain.</li>
+<li><strong>Compare</strong> every field with the table, and read the app's notes about anything uncertain.</li>
 <li><strong>Correct</strong> any differences, tick the review box, click <strong>Confirm event</strong>, and <strong>download</strong> the <code>.ics</code> file.</li>
 <li><strong>Import</strong> the file into your calendar and check the event.</li>
 </ul>
@@ -261,7 +264,7 @@ p.warning{color:#b42318;background:#fef3f2;border:1px solid #fecdca;border-left:
 <p>From here, you can:</p>
 <ul>
 <li><strong>Keep improving this app</strong> with the optional sections below, or</li>
-<li><strong>Start your own project</strong> in the same Cowork session.</li>
+<li><strong>Start your own project</strong> in the same Cowork session, with <a href="Lab_04_Guide_Build_Your_Own_Project.html">Lab 04 — Build Your Own Project</a>.</li>
 </ul>
 <br>
 
@@ -423,7 +426,7 @@ p.warning{color:#b42318;background:#fef3f2;border:1px solid #fecdca;border-left:
 </tr>
 </tbody>
 </table>
-<p>If you hit a context error, ask Claude to raise the model's context size and to show Ollama's full error message in the app, then restart the app before retesting. More context uses more memory. On the workshop Mac, the recent log can be read with <code>tail -n 80 ~/.ollama/logs/server.log</code>. If Ollama was started with <code>ollama serve</code>, its terminal output is another source of evidence.</p>
+<p>If you hit a context error, ask Claude to raise the model's context size and to show Ollama's full error message in the app, then restart the app before retesting. More context uses more memory. On a Mac, the recent log can be read with <code>tail -n 80 ~/.ollama/logs/server.log</code>. If Ollama was started with <code>ollama serve</code>, its terminal output is another source of evidence.</p>
 <p><strong>Checkpoint:</strong> Explain what failed, what evidence supported your change, what you retested, and what remains uncertain. If a new error appears at a later stage, record that separately—it may reveal the next problem rather than mean the previous fix failed.</p>
 <br>
 
@@ -471,7 +474,7 @@ p.warning{color:#b42318;background:#fef3f2;border:1px solid #fecdca;border-left:
 
 <h2>What's Next</h2>
 <ul>
-<li><strong>Next:</strong> you've finished all three labs! Your Claude session now knows what you've built and how you like to work, so it's a great place to start your own project, such as a fitness tracker or a portfolio tracker. Or go back to the <a href="https://gcodekhanna1.github.io/2026-10-ai-skills-lab/">Main Menu</a> to revisit any lab.</li>
+<li><strong>Next:</strong> you've finished all three labs! Your Claude session now knows what you've built and how you like to work, so it's a great place to start your own project with <a href="Lab_04_Guide_Build_Your_Own_Project.html">Lab 04 — Build Your Own Project</a>. Or go back to the <a href="https://gcodekhanna1.github.io/2026-10-ai-skills-lab/">Main Menu</a> to revisit any lab.</li>
 <li><strong>Before you leave:</strong> see <a href="Lab_Save_Your_Work.html">How to Save Your Work for Later</a>, so you can pick up where you left off.</li>
 </ul>
 <div class="bottomnav"><a href="https://gcodekhanna1.github.io/2026-10-ai-skills-lab/">← Main Menu</a></div></main><script>

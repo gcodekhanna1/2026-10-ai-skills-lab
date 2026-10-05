@@ -8,7 +8,7 @@ STYLE GUIDE FOR THE LAB GUIDES (this comment doesn't appear in the preview)
 - Commands: in a code block on their own line, never bold.
 - Files, folders and email addresses: `code` style.
 - Links: clickable with readable text, e.g. [ollama.com/download](https://ollama.com/download).
-- Names: Webex (not WebEx), Claude desktop app, Ollama, uv, Lab 00 / Lab 01 / Lab 02 / Lab 03.
+- Names: Webex (not WebEx), Claude desktop app, Ollama, uv, Lab 00 / Lab 01 / Lab 02 / Lab 03 / Lab 04.
 - Images: centered <p align="center"> block with a width, one <br> before and after.
 - Placeholders: [PLACEHOLDER - description] on its own line, with an empty line before and after.
 - Punctuation: full sentences end with a period; no double spaces; use an em dash (—), not --.
@@ -121,6 +121,7 @@ And you can take the code home and keep using it! Once you've set up the require
 Claude is now building your app. This takes about 10–15 minutes, and Claude shows its progress as it works. **Stay close to your laptop:** Claude sometimes pauses to ask a question or for your permission, and it waits until you answer.
 
 * **Keep an eye on Claude:** glance at the Claude window every minute or two. If it asks for permission, read the request and click **Allow** (or **Allow for this task**, so it asks less often). If it asks a question, answer it. Nothing moves forward until you do.
+
 * **Download the AI model:** open a terminal window (**Terminal** on a Mac, **PowerShell** on Windows) and run this command. It's the biggest download of the day (several GB), so start it now. If your laptop has only 8 GB of memory, download `qwen3.5:4b` instead.
 
 ```sh
@@ -238,7 +239,7 @@ You also took a step beyond a self-contained tool: this app talks to a live exte
 
 Building with AI is an iterative process. Clear prompts, checking the results against the actual evidence, and keeping useful guides all help you create an MVP you can understand, run, and improve. Take what you've built, point it at your own Webex spaces, and keep experimenting!
 
-* **Next:** leave this app running (keep its terminal window open) and move on to [Lab 03 — Build an Image-to-Calendar Assistant](Lab_03_Guide_Image_to_Calendar.html), or try the optional improvements below first.
+* **Next:** leave this app running (keep its terminal window open). **You've finished the core labs!** Choose your next step: [Lab 03 — Build an Image-to-Calendar Assistant](Lab_03_Guide_Image_to_Calendar.html) or [Lab 04 — Build Your Own Project](Lab_04_Guide_Build_Your_Own_Project.html), or try the optional improvements below first.
 
 <br>
 
@@ -258,5 +259,7 @@ Or, if the app picks up something that isn't a real task:
 
 ## What's Next
 
-* **Next:** you've built your Webex Action Center! Continue to [Lab 03 — Build an Image-to-Calendar Assistant](Lab_03_Guide_Image_to_Calendar.html).
+* **You've finished the core labs!** Choose your path, or do both:
+    - [Lab 03 — Build an Image-to-Calendar Assistant](Lab_03_Guide_Image_to_Calendar.html): a guided lab, where you build an app that reads event images.
+    - [Lab 04 — Build Your Own Project](Lab_04_Guide_Build_Your_Own_Project.html): Claude interviews you, shows you a mockup, and builds an app of your own.
 * **Before you leave:** see [How to Save Your Work for Later](Lab_Save_Your_Work.html), so you can pick up where you left off.

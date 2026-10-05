@@ -8,7 +8,7 @@ STYLE GUIDE FOR THE LAB GUIDES (this comment doesn't appear in the preview)
 - Commands: in a code block on their own line, never bold.
 - Files, folders and email addresses: `code` style.
 - Links: clickable with readable text, e.g. [ollama.com/download](https://ollama.com/download).
-- Names: Webex (not WebEx), Claude desktop app, Ollama, uv, Lab 00 / Lab 01 / Lab 02 / Lab 03.
+- Names: Webex (not WebEx), Claude desktop app, Ollama, uv, Lab 00 / Lab 01 / Lab 02 / Lab 03 / Lab 04.
 - Images: centered <p align="center"> block with a width, one <br> before and after.
 - Placeholders: [PLACEHOLDER - description] on its own line, with an empty line before and after.
 - Punctuation: full sentences end with a period; no double spaces; use an em dash (—), not --.
@@ -25,6 +25,8 @@ We get events in all kinds of formats: flyers, posters, screenshots, photos of a
 
 In Lab 01, you worked with information in documents. In Lab 02, you turned conversation text into suggested actions. The goal of this lab is the same: build a minimum viable product (MVP), a simple working version that does the main job, then improve it if you want to.
 
+**This lab is optional:** Labs 01 and 02 are the core. Lab 03 is one of two paths after them; the other is [Lab 04 — Build Your Own Project](Lab_04_Guide_Build_Your_Own_Project.html).
+
 <br>
 
 ## Before You Start
@@ -33,8 +35,8 @@ Your app may look and work a little differently from the examples—or from the 
 
 **How this lab works:**
 
-* **Required:** build the first version and check one event end to end, from the image to your calendar. That's **Steps 01–07**, from "Get Your Images Ready" to "Save What You Learned as a Skill".
-* **Optional:** everything after that: improvement rounds, investigating failures, and ideas for going further. Pick what interests you, or move on to your own project. Both are great uses of your time.
+* **Main part:** build the first version and check one event end to end, from the image to your calendar. That's **Steps 01–07**, from "Get Your Images Ready" to "Save What You Learned as a Skill".
+* **Optional:** everything after that: improvement rounds, investigating failures, and ideas for going further. Pick what interests you, or move on to [Lab 04 — Build Your Own Project](Lab_04_Guide_Build_Your_Own_Project.html). Both are great uses of your time.
 
 <br>
 
@@ -143,6 +145,7 @@ You'll use **two different kinds of images** in this lab: the app screenshot hel
 Claude is now building your app. This takes about 10–15 minutes, and Claude shows its progress as it works. **Stay close to your laptop:** Claude sometimes pauses to ask a question or for your permission, and it waits until you answer.
 
 * **Keep an eye on Claude:** glance at the Claude window every minute or two. If it asks for permission, read the request and click **Allow** (or **Allow for this task**, so it asks less often). If it asks a question, answer it. Nothing moves forward until you do.
+
 * **Check your model:** there's nothing new to download. If you skipped Lab 02, open a terminal window (**Terminal** on a Mac, **PowerShell** on Windows) and run this command now:
 
 ```sh
@@ -181,7 +184,7 @@ Compare your running app with the screenshot you gave Claude. Can you find the u
 Test your app with the sample poster, and compare its answers with the expected values in the table below.
 
 * **Upload** `Lab_03_sample_poster.png` in your app and click the button to extract the event details.
-* **Compare** every field with the expected values in the table below, and read the app's notes about anything uncertain.
+* **Compare** every field with the table, and read the app's notes about anything uncertain.
 * **Correct** any differences, tick the review box, click **Confirm event**, and **download** the `.ics` file.
 * **Import** the file into your calendar and check the event.
 
@@ -264,7 +267,7 @@ Congratulations! You've built three working apps with AI: a Knowledge Base, an A
 From here, you can:
 
 * **Keep improving this app** with the optional sections below, or
-* **Start your own project** in the same Cowork session.
+* **Start your own project** in the same Cowork session, with [Lab 04 — Build Your Own Project](Lab_04_Guide_Build_Your_Own_Project.html).
 
 <br>
 
@@ -381,7 +384,7 @@ In pairs, have one person propose the explanation and the other identify the evi
 | Error explicitly says input exceeds context | The request doesn't fit the active model context. | Request context setting, input size, and available memory. |
 | Request succeeds but the date is wrong | Transport worked; recognition or interpretation still needs review. | Compare source text and warnings with the image. |
 
-If you hit a context error, ask Claude to raise the model's context size and to show Ollama's full error message in the app, then restart the app before retesting. More context uses more memory. On the workshop Mac, the recent log can be read with `tail -n 80 ~/.ollama/logs/server.log`. If Ollama was started with `ollama serve`, its terminal output is another source of evidence.
+If you hit a context error, ask Claude to raise the model's context size and to show Ollama's full error message in the app, then restart the app before retesting. More context uses more memory. On a Mac, the recent log can be read with `tail -n 80 ~/.ollama/logs/server.log`. If Ollama was started with `ollama serve`, its terminal output is another source of evidence.
 
 **Checkpoint:** Explain what failed, what evidence supported your change, what you retested, and what remains uncertain. If a new error appears at a later stage, record that separately—it may reveal the next problem rather than mean the previous fix failed.
 
@@ -460,5 +463,5 @@ You can take the project home and use your own images. The skill to practice is 
 
 ## What's Next
 
-* **Next:** you've finished all three labs! Your Claude session now knows what you've built and how you like to work, so it's a great place to start your own project, such as a fitness tracker or a portfolio tracker. Or go back to the [Main Menu](https://gcodekhanna1.github.io/2026-10-ai-skills-lab/) to revisit any lab.
+* **Next:** you've finished all three labs! Your Claude session now knows what you've built and how you like to work, so it's a great place to start your own project with [Lab 04 — Build Your Own Project](Lab_04_Guide_Build_Your_Own_Project.html). Or go back to the [Main Menu](https://gcodekhanna1.github.io/2026-10-ai-skills-lab/) to revisit any lab.
 * **Before you leave:** see [How to Save Your Work for Later](Lab_Save_Your_Work.html), so you can pick up where you left off.

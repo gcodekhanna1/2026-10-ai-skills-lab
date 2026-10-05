@@ -8,7 +8,7 @@ STYLE GUIDE FOR THE LAB GUIDES (this comment doesn't appear in the preview)
 - Commands: in a code block on their own line, never bold.
 - Files, folders and email addresses: `code` style.
 - Links: clickable with readable text, e.g. [ollama.com/download](https://ollama.com/download).
-- Names: Webex (not WebEx), Claude desktop app, Ollama, uv, Lab 00 / Lab 01 / Lab 02 / Lab 03.
+- Names: Webex (not WebEx), Claude desktop app, Ollama, uv, Lab 00 / Lab 01 / Lab 02 / Lab 03 / Lab 04.
 - Images: centered <p align="center"> block with a width, one <br> before and after.
 - Placeholders: [PLACEHOLDER - description] on its own line, with an empty line before and after.
 - Punctuation: full sentences end with a period; no double spaces; use an em dash (—), not --.
@@ -27,7 +27,7 @@ STYLE GUIDE FOR THE LAB GUIDES (this comment doesn't appear in the preview)
 
 <br>
 
-## Step 1: Ask Claude for a Summary of Your Session
+## Step 01: Ask Claude for a Summary of Your Session
 
 Before you leave, send this prompt in the same Cowork session you used for the labs:
 
@@ -37,7 +37,7 @@ Check that `My Workshop Summary.md` appears in your lab folder. It's a Markdown 
 
 <br>
 
-## Step 2: Save How You Like to Work as a Skill
+## Step 02: Save How You Like to Work as a Skill
 
 A skill is a document that tells Claude how you like things done, so you don't have to explain it again in every session. If you saved a skill during the labs, this step brings it up to date. Send this prompt:
 
@@ -45,7 +45,7 @@ A skill is a document that tells Claude how you like things done, so you don't h
 
 <br>
 
-## Step 3: If You Used a Lab PC, Take Your Folder With You
+## Step 03: If You Used a Lab PC, Take Your Folder With You
 
 Lab PCs are cleared after each session, so copy your work before you leave:
 

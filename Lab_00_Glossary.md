@@ -8,7 +8,7 @@ STYLE GUIDE FOR THE LAB GUIDES (this comment doesn't appear in the preview)
 - Commands: in a code block on their own line, never bold.
 - Files, folders and email addresses: `code` style.
 - Links: clickable with readable text, e.g. [ollama.com/download](https://ollama.com/download).
-- Names: Webex (not WebEx), Claude desktop app, Ollama, uv, Lab 00 / Lab 01 / Lab 02 / Lab 03.
+- Names: Webex (not WebEx), Claude desktop app, Ollama, uv, Lab 00 / Lab 01 / Lab 02 / Lab 03 / Lab 04.
 - Images: centered <p align="center"> block with a width, one <br> before and after.
 - Placeholders: [PLACEHOLDER - description] on its own line, with an empty line before and after.
 - Punctuation: full sentences end with a period; no double spaces; use an em dash (—), not --.
@@ -65,6 +65,7 @@ Keep this page open while you work. If you come across a term you don't know, lo
 | **Markdown (.md)** | A simple text format for documents, where symbols such as `#` and `**` add headings and bold. The lab guides and READMEs are Markdown files. | All labs |
 | **Menu bar** | The strip across the top of a Mac screen. The llama icon there means Ollama is running. | Lab 00 |
 | **Mocked test** | A test that uses a pretend version of something (like the AI model), so it runs quickly without needing the real thing. | All labs |
+| **Mockup** | A picture of an app's main screen, with sample data, made before any code is written. In Lab 04, Claude shows you one to approve before it builds. | Lab 04 |
 | **MVP (minimum viable product)** | A simple, working first version that does the main job. Each lab builds an MVP you can then improve. | All labs |
 | **nomic-embed-text** | A small embedding model you run in Ollama to turn document text into embeddings. | Lab 01 |
 | **OCR (optical character recognition)** | Technology that reads text from a picture, such as a scanned page. The Lab 01 app doesn't do OCR, so scanned PDFs can't be read. | Lab 01 |
@@ -72,7 +73,7 @@ Keep this page open while you work. If you come across a term you don't know, lo
 | **Opus 5.5** | The Claude model you use in Cowork for the labs. | Lab 00 |
 | **Personal access token** | A secret code from developer.webex.com that lets your app read your Webex spaces as you. It expires after 12 hours; keep it private. | Lab 02 |
 | **Pillow** | A Python library for opening, checking and resizing images. | Lab 03 |
-| **Port** | A numbered "door" an app uses on your computer. Each lab app has its own (8501, 8502, 8503), so all three can run at the same time. | All labs |
+| **Port** | A numbered "door" an app uses on your computer. Each lab app has its own (8501–8504), so they can all run at the same time. | All labs |
 | **Prompt** | The instructions you give an AI in plain language. Each lab starts with a prompt that describes the app to build. | All labs |
 | **Prompt injection** | Text that tries to trick an AI into following it as instructions, for example words hidden in an image. The Lab 03 app treats image text as data only. | Lab 03 |
 | **Pydantic** | A Python library that checks data has the expected shape. Lab 03 uses it to define and validate the model's answers. | Lab 03 |

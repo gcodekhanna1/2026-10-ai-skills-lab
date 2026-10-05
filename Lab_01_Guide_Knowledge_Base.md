@@ -8,7 +8,7 @@ STYLE GUIDE FOR THE LAB GUIDES (this comment doesn't appear in the preview)
 - Commands: in a code block on their own line, never bold.
 - Files, folders and email addresses: `code` style.
 - Links: clickable with readable text, e.g. [ollama.com/download](https://ollama.com/download).
-- Names: Webex (not WebEx), Claude desktop app, Ollama, uv, Lab 00 / Lab 01 / Lab 02 / Lab 03.
+- Names: Webex (not WebEx), Claude desktop app, Ollama, uv, Lab 00 / Lab 01 / Lab 02 / Lab 03 / Lab 04.
 - Images: centered <p align="center"> block with a width, one <br> before and after.
 - Placeholders: [PLACEHOLDER - description] on its own line, with an empty line before and after.
 - Punctuation: full sentences end with a period; no double spaces; use an em dash (—), not --.
@@ -32,6 +32,8 @@ The goal of this lab is to build a minimum viable product (MVP): a simple, worki
 ## Before You Start
 
 Your app may look and work a little differently from the examples or from the apps built by others in the lab. That’s expected! AI coding tools can suggest different approaches, and there are many ways to solve the same problem.
+
+* **Your path today:** Labs 01 and 02 are the core of this workshop. After that, choose your own adventure: Lab 03 (a guided lab), Lab 04 (your own project), or both.
 
 <br>
 

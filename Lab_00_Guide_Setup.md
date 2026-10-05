@@ -8,7 +8,7 @@ STYLE GUIDE FOR THE LAB GUIDES (this comment doesn't appear in the preview)
 - Commands: in a code block on their own line, never bold.
 - Files, folders and email addresses: `code` style.
 - Links: clickable with readable text, e.g. [ollama.com/download](https://ollama.com/download).
-- Names: Webex (not WebEx), Claude desktop app, Ollama, uv, Lab 00 / Lab 01 / Lab 02 / Lab 03.
+- Names: Webex (not WebEx), Claude desktop app, Ollama, uv, Lab 00 / Lab 01 / Lab 02 / Lab 03 / Lab 04.
 - Images: centered <p align="center"> block with a width, one <br> before and after.
 - Placeholders: [PLACEHOLDER - description] on its own line, with an empty line before and after.
 - Punctuation: full sentences end with a period; no double spaces; use an em dash (—), not --.
@@ -21,11 +21,9 @@ STYLE GUIDE FOR THE LAB GUIDES (this comment doesn't appear in the preview)
 
 The goal of this document is to walk you through the steps of setting up the basics of what you'll need on your laptop to work on the lab.
 
-If you have time before the workshop, you can do this setup at home. It will save you time in the lab.
-
 * **All guides and materials:** [gcodekhanna1.github.io/2026-10-ai-skills-lab](https://gcodekhanna1.github.io/2026-10-ai-skills-lab/). Each guide is a web page, with a PDF version to print or save.
 
-* **Short on time?** Steps 01–03 can be done before the lab on your own laptop. Steps 04–07 are done in the lab, once you have your desk number.
+* **Before the workshop:** you can do Steps 01–03 at home on your own laptop, which saves time in the lab. Steps 04–07 are done in the lab, once you have your desk number.
 
 <br>
 
@@ -46,7 +44,7 @@ If you have time before the workshop, you can do this setup at home. It will sav
 
 * **Web browser:** to access the Webex organization you'll be a part of (used in Lab 02, and so the lab team can send you files and help during the workshop).
 
-* **Note:** you'll install a few free tools (Ollama now, and uv in Lab 01). If your work laptop doesn't allow installs, ask us for a lab PC.
+* **Note:** you'll install a few free tools (the Claude desktop app and Ollama in Lab 00, and uv in Lab 01). If your work laptop doesn't allow installs, ask us for a lab PC.
 
 <br>
 
@@ -59,7 +57,7 @@ If you have time before the workshop, you can do this setup at home. It will sav
 * Create the folder in your **home folder** (the folder with your user name):
     - **Mac:** in Finder, press **⌘ + Shift + H**. Your home folder opens (e.g. `/Users/yourname`). Choose **File → New Folder**.
     - **Windows:** in File Explorer, click the address bar, type `%USERPROFILE%` and press **Enter**. Your home folder opens (e.g. `C:\Users\yourname`). Choose **New → Folder**.
-    - Give it a unique name, such as `2026 - WebexOne - AI Skills Lab - Demo XY`, where "XY" corresponds to your organization email handle.
+    - Give it a name you'll recognize, such as `2026 - WebexOne - AI Skills Lab`.
     - This is the folder that will contain all the files and dependencies for what you will be building in this lab.
 
 * **Why not a synced folder?** While Claude builds, it creates thousands of small files. A sync app trying to upload them at the same time can lock files and break the build. Desktop and Documents are often synced without you noticing (by iCloud on a Mac, or OneDrive on many work laptops), which is why we use your home folder.
@@ -140,8 +138,8 @@ ollama --version
 </p>
 <br>
 
-* Go back to your email (from Step 04) and look for the verification link, which should look like the screenshot below. It can take a minute to arrive; if you don't see it, check your spam or junk folder. **Open the link on the same laptop where you're running Claude.**
-    - **Note:** your work or personal email was added as a forwarding address in your Outlook account.
+* Go back to your email (from Step 04) and look for the verification link, which should look like the screenshot below. It can take a minute to arrive; if you don't see it, check your spam or junk folder. **Open the link on the same computer where you're running Claude.**
+    - **Note:** the lab account forwards Claude's email to the address you registered with.
     - **Asked for a code?** Claude's screen may mention a code, but the email contains a sign-in **link** instead. Just click the link.
 
 <br>
@@ -184,7 +182,7 @@ ollama --version
 * Configure the session to be a Cowork session:
     - In the dialog box, select **Cowork** (instead of **Chat**).
     - Leave the default model as **Opus 5.5** (it is one of the latest models from Anthropic).
-    - Click **Project or folder** and select the folder you created earlier (e.g., `2026 - WebexOne - AI Skills Lab - Demo XY`).
+    - Click **Project or folder** and select the folder you created earlier (e.g., `2026 - WebexOne - AI Skills Lab`).
     - If Claude asks for permission to access the folder, click **Always Allow**.
     - Check that the folder is connected: its name should show in the session. If it doesn't, add it again.
 

@@ -1,0 +1,333 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Lab 04 — Build Your Own Project</title><style>
+*{box-sizing:border-box}body{margin:0;background:#f3f5f8;color:#172335;font:17px/1.65 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}main{max-width:1000px;margin:36px auto;padding:48px 64px;background:white;border-radius:12px;box-shadow:0 4px 24px #1723350c}h1{font-size:2.3rem;line-height:1.2;margin-top:0;color:#102943}h2{font-size:1.55rem;line-height:1.3;border-bottom:1px solid #dce4ec;padding-bottom:10px}h3{font-size:1.15rem;margin-top:28px}li{margin:8px 0}a{color:#075da8}code{background:#edf1f5;padding:2px 5px;border-radius:4px;font-size:.9em;overflow-wrap:anywhere}pre{background:#edf1f5;padding:16px;border-radius:7px}pre code{padding:0}img{max-width:100%;height:auto;border:1px solid #dce4ec;border-radius:6px}p[align="center"]{margin:12px 0} @media(max-width:650px){main{margin:0;padding:28px 22px;border-radius:0}img{width:100%}h1{font-size:1.9rem}}@media print{body{background:white;font-size:11pt}main{margin:0;padding:0;max-width:none;box-shadow:none}h1,h2,h3{break-after:avoid}img,pre{break-inside:avoid}a{color:inherit}}
+
+table{border-collapse:collapse;width:100%;margin:20px 0}th,td{border:1px solid #dce4ec;padding:10px;text-align:left}th{background:#edf1f5}pre{white-space:pre-wrap;overflow-wrap:anywhere}
+@page { size: letter; margin: 0.65in; }
+@media print {
+  body { font-size: 10.5pt; line-height: 1.5; }
+  h1 { font-size: 25pt; }
+  h2 { font-size: 17pt; }
+  h3 { font-size: 12pt; }
+  p, li { orphans: 3; widows: 3; }
+  img { max-height: 7in; object-fit: contain; }
+  p[align="center"] { break-inside: avoid; }
+  pre { break-inside: auto; }
+  tr { break-inside: avoid; }
+  thead { display: table-header-group; }
+}
+
+blockquote{position:relative;margin:22px 0;padding:34px 22px 14px;background:#f4f8fd;border:1px solid #c9d8ee;border-left:5px solid #0b4f8a;border-radius:8px;font-family:"SF Mono",Menlo,Consolas,"Liberation Mono",monospace;font-size:.86em;line-height:1.6;color:#10233f}blockquote::before{content:"PROMPT";position:absolute;top:10px;left:22px;font:700 .72rem/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:.12em;color:#0b4f8a}blockquote p{margin:10px 0}blockquote ul,blockquote ol{padding-left:22px}blockquote li{margin:4px 0}blockquote code{background:#e3ecf7}blockquote pre{background:#e3ecf7}@media print{blockquote{break-inside:auto;font-size:9pt}}
+
+p.warning{color:#b42318;background:#fef3f2;border:1px solid #fecdca;border-left:5px solid #d92d20;border-radius:8px;padding:12px 16px;font-weight:600}@media print{p.warning{break-inside:avoid}}
+
+.copybtn{position:absolute;top:8px;right:10px;display:inline-flex;align-items:center;gap:5px;font:600 .72rem/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:.04em;color:#0b4f8a;background:#fff;border:1px solid #c9d8ee;border-radius:6px;padding:5px 9px;cursor:pointer}.copybtn:hover{background:#e3ecf7}.copybtn svg{width:14px;height:14px}.copybtn.done{color:#067647;border-color:#abefc6}@media print{.copybtn{display:none!important}}
+
+.topnav{position:sticky;top:0;z-index:10;background:#0b0c12;border-bottom:3px solid transparent;border-image:linear-gradient(90deg,#ff8a3d,#e0409b,#7b4dff,#2f6bff) 1}.topnav div{max-width:1000px;margin:0 auto;padding:10px 16px;display:flex;justify-content:space-between;align-items:center;gap:12px;font:14px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.topnav a{display:inline-block;padding:2px;border-radius:999px;background:linear-gradient(90deg,#ff8a3d,#e0409b,#7b4dff,#2f6bff);text-decoration:none;flex:none}.topnav a span{display:block;background:#0b0c12;border-radius:999px;padding:4px 14px;font-weight:600}.topnav a b{background:linear-gradient(90deg,#ffb07a,#f06ab8,#a98bff,#7fa6ff);-webkit-background-clip:text;background-clip:text;color:transparent}.topnav a:hover span{background:transparent}.topnav a:hover b{color:#fff;background:none;-webkit-background-clip:border-box}.topnav small{color:#c9b8ff;letter-spacing:.1em;text-transform:uppercase;font-size:11px;text-align:right}.bottomnav{margin-top:36px;padding-top:18px;border-top:1px solid #dce4ec}.bottomnav a{display:inline-block;font-weight:600;color:#fff;background:linear-gradient(90deg,#ff8a3d,#e0409b,#7b4dff,#2f6bff);padding:7px 16px;border-radius:8px;text-decoration:none}@media(max-width:650px){.topnav small{display:none}}@media print{.topnav,.bottomnav{display:none!important}}
+</style></head><body><nav class="topnav"><div><a href="https://gcodekhanna1.github.io/2026-10-ai-skills-lab/"><span><b>← Main Menu</b></span></a><small>WebexOne 2026 · Building AI Projects</small></div></nav><main><h1>Lab 04 — Build Your Own Project</h1>
+<p><em>Let Claude interview you, design a mockup with you, and then build a personal app that fits what you actually want</em>.</p>
+<h2>Introduction</h2>
+<p>Congratulations on finishing Labs 01 and 02, the core of this workshop! From here, it's your choice: continue to <a href="Lab_03_Guide_Image_to_Calendar.html">Lab 03 — Build an Image-to-Calendar Assistant</a>, build your own project with this guide, or both.</p>
+<p>Your Claude session is now &quot;context rich&quot;: it knows the apps you've built, how you like them set up and explained, and what worked along the way. That makes it a great starting point for something of your own.</p>
+<p>In the earlier labs, we gave you a detailed prompt describing the app. This time, <strong>you</strong> are the product owner. Instead of a prompt with our idea of the app, you'll send a prompt that asks Claude to <strong>interview you</strong> first, write a short plan, and show you a <strong>mockup</strong> before it writes any code. That's how real product teams work, and it's a habit you can reuse for any idea after the workshop.</p>
+<br>
+
+<h2>Before You Start</h2>
+<p>Your app will be different from everyone else's, and that's the point!</p>
+<p><strong>How this lab works:</strong></p>
+<ul>
+<li><strong>Interview:</strong> Claude asks you a handful of questions, with options to pick from.</li>
+<li><strong>Plan:</strong> Claude writes a short MVP plan: what goes into the first version, and what can wait.</li>
+<li><strong>Mockup:</strong> Claude shows you a picture of the main screen, with sample data. You ask for changes until it looks right.</li>
+<li><strong>Build:</strong> only then does Claude build the app, set up the same way as your other lab apps.</li>
+</ul>
+<p><strong>Keep it small:</strong> aim for an app you could use next week, with one main screen and one main job. You can always add features later.</p>
+<br>
+
+<h2>What You'll Need</h2>
+<ul>
+<li><p><strong>Setup from Lab 00:</strong> the Claude desktop app with a Cowork session connected to your lab folder, and Ollama installed and running. If you haven't done these yet, start with the <a href="Lab_00_Guide_Setup.html">Lab 00 Setup guide</a>.</p>
+</li>
+<li><p><strong>The same Cowork session you used for Labs 01 and 02:</strong> that's where all the context is. Your <code>My Building Skill.md</code> file from the earlier labs helps too.</p>
+</li>
+<li><p><strong>AI model:</strong> <code>qwen3.5:9b</code>, which you already downloaded in Lab 02. It can read both text and photos. If your laptop has only 8 GB of memory, use <code>qwen3.5:4b</code>.</p>
+</li>
+<li><p><strong>Optional:</strong> a phone camera, if your app reads photos (for example, a nutrition label or a vitamin bottle).</p>
+</li>
+</ul>
+<br>
+
+<h2>Step 01: Choose Your Project</h2>
+<p>Pick one of these ideas, or bring your own:</p>
+<table>
+<thead>
+<tr>
+  <th>Project</th>
+  <th>What it could do</th>
+  <th>Ideas for photos or files</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+  <td><strong>Fitness Tracker</strong></td>
+  <td>Log workouts, steps or meals, and see your progress over time.</td>
+  <td>A photo of a nutrition label, or of a workout written on a gym whiteboard.</td>
+</tr>
+<tr>
+  <td><strong>Medication Tracker</strong></td>
+  <td>Keep a list of your medications, schedules and refill dates, plus your own notes.</td>
+  <td>A photo of a prescription bottle, or notes from a doctor's visit.</td>
+</tr>
+<tr>
+  <td><strong>Portfolio Tracker</strong></td>
+  <td>Track your investments, what they're worth, and how your mix has changed.</td>
+  <td>A CSV export from your brokerage account, or a statement.</td>
+</tr>
+<tr>
+  <td><strong>Your Own Idea</strong></td>
+  <td>Anything you'd like to have on your laptop.</td>
+  <td>Whatever your idea needs.</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p><strong>Use sample data in the lab:</strong> Claude will create realistic, fictional sample data for testing. Real prescription labels and brokerage files contain personal information, so try those at home, if at all. A vitamin bottle makes a good stand-in for a prescription bottle.</p>
+</li>
+<li><p><strong>Your data stays on your laptop:</strong> like the earlier labs, these apps store your data locally and use an AI model that runs on your laptop.</p>
+</li>
+</ul>
+<br>
+
+<h2>Step 02: Send Your Interview Prompt</h2>
+<ul>
+<li><p><strong>Before you send it:</strong> check that your lab folder is connected to this Cowork session. If it isn't, add it again.</p>
+</li>
+<li><p><strong>Copy the prompt for your project</strong> below and send it. These prompts don't build anything yet: they start the interview.</p>
+</li>
+</ul>
+<h3>Fitness Tracker</h3>
+<blockquote>
+<p>I'd like to build a personal fitness tracker for myself. Before writing any code, interview me so the app fits what I actually want.</p>
+<ul>
+<li>Ask me 5 or 6 questions, a few at a time. Where you can, give me options to choose from, and let me type my own answer. Cover what I want to track, how I'd like to get data in (typing, photos, files), what I want to see (for example, lists, charts, streaks or weekly summaries), and what should stay private.</li>
+<li>Ideas you can offer: workouts, steps, weight, meals, reading a nutrition label or a gym whiteboard from a photo, goals and progress charts.</li>
+<li>Then write a short MVP plan: the must-haves for a first version you can build in about 15 minutes, and ideas for later. Save it as <code>MVP Plan.md</code> in a new subfolder named <code>lab-04-fitness-tracker</code> inside my connected folder.</li>
+<li>Then create a mockup: a single <code>Mockup.html</code> page in that subfolder, showing the main screen with realistic sample data. It's a picture of the app, not the app itself, so don't write any Python yet. Show it to me and ask what I'd like to change.</li>
+</ul>
+<p>Don't build the app until I tell you the mockup is approved.</p>
+</blockquote>
+<h3>Medication Tracker</h3>
+<blockquote>
+<p>I'd like to build a personal medication tracker for myself. Before writing any code, interview me so the app fits what I actually want.</p>
+<ul>
+<li>Ask me 5 or 6 questions, a few at a time. Where you can, give me options to choose from, and let me type my own answer. Cover who it's for (me, or someone I care for), what I want to track, how I'd like to get data in (typing, photos, files), what I want to see (for example, a daily schedule, refill dates or a printable list for my doctor), and what should stay private.</li>
+<li>Ideas you can offer: reading the label on a photo of a prescription bottle, organizing notes from a doctor's visit, a daily checklist, refill reminders, a list to bring to appointments.</li>
+<li>Then write a short MVP plan: the must-haves for a first version you can build in about 15 minutes, and ideas for later. Save it as <code>MVP Plan.md</code> in a new subfolder named <code>lab-04-medication-tracker</code> inside my connected folder.</li>
+<li>Then create a mockup: a single <code>Mockup.html</code> page in that subfolder, showing the main screen with realistic, fictional sample data. It's a picture of the app, not the app itself, so don't write any Python yet. Show it to me and ask what I'd like to change.</li>
+</ul>
+<p>Include these limits in the plan and the mockup: this is a personal organizer, not medical advice. The app must never recommend doses or changes, or present drug interactions as fact, and it should remind me to check with my pharmacist or doctor. Anything read from a photo must be shown to me to review and correct before it's saved.</p>
+<p>Don't build the app until I tell you the mockup is approved.</p>
+</blockquote>
+<h3>Portfolio Tracker</h3>
+<blockquote>
+<p>I'd like to build a personal investment portfolio tracker for myself. Before writing any code, interview me so the app fits what I actually want.</p>
+<ul>
+<li>Ask me 5 or 6 questions, a few at a time. Where you can, give me options to choose from, and let me type my own answer. Cover what I want to track (for example, stocks, funds or cash, across one or more accounts), how I'd like to get data in (typing, a CSV export, a statement), what I want to see (for example, total value, allocation charts or gains and losses), and what should stay private.</li>
+<li>Ideas you can offer: importing a CSV export from a brokerage, entering prices by hand, an allocation pie chart, a value-over-time chart, notes on why I bought something.</li>
+<li>Then write a short MVP plan: the must-haves for a first version you can build in about 15 minutes, and ideas for later. Save it as <code>MVP Plan.md</code> in a new subfolder named <code>lab-04-portfolio-tracker</code> inside my connected folder.</li>
+<li>Then create a mockup: a single <code>Mockup.html</code> page in that subfolder, showing the main screen with realistic, fictional sample data. It's a picture of the app, not the app itself, so don't write any Python yet. Show it to me and ask what I'd like to change.</li>
+</ul>
+<p>Include these limits in the plan and the mockup: this is for tracking only, not financial advice. The app must never recommend buying or selling, and it must not connect to or trade in any brokerage account. For the first version, prices are entered by hand or imported from a file, unless I ask for a live price source.</p>
+<p>Don't build the app until I tell you the mockup is approved.</p>
+</blockquote>
+<h3>Your Own Idea</h3>
+<p>Replace the text in brackets with a sentence or two about your idea.</p>
+<blockquote>
+<p>I'd like to build [describe your idea, for example: an app that tracks my kids' chores and allowance]. Before writing any code, interview me so the app fits what I actually want.</p>
+<ul>
+<li>Ask me 5 or 6 questions, a few at a time. Where you can, give me options to choose from, and let me type my own answer. Cover who it's for, what it should do, how I'd like to get data in (typing, photos, files), what I want to see, and what should stay private.</li>
+<li>Then write a short MVP plan: the must-haves for a first version you can build in about 15 minutes, and ideas for later. Suggest a short app name, and save the plan as <code>MVP Plan.md</code> in a new subfolder inside my connected folder, named <code>lab-04-</code> followed by the app name (for example, <code>lab-04-chore-tracker</code>).</li>
+<li>Then create a mockup: a single <code>Mockup.html</code> page in that subfolder, showing the main screen with realistic, fictional sample data. It's a picture of the app, not the app itself, so don't write any Python yet. Show it to me and ask what I'd like to change.</li>
+</ul>
+<p>If my idea involves health, money, or other people's personal information, add sensible limits to the plan (for example, no medical or financial advice) and tell me what they are.</p>
+<p>Don't build the app until I tell you the mockup is approved.</p>
+</blockquote>
+<br>
+
+<h2>Step 03: Answer the Interview</h2>
+<p>Claude now asks you its questions, a few at a time, usually with options you can click.</p>
+<ul>
+<li><strong>Pick an option, or type your own answer:</strong> there are no wrong answers. You're describing the app you'd like.</li>
+<li><strong>Not sure?</strong> Say &quot;you decide&quot; or &quot;keep it simple&quot;. Claude will pick a sensible default and tell you what it chose.</li>
+<li><strong>Keep the first version small:</strong> if Claude's plan has too many must-haves, ask it to move some to &quot;ideas for later&quot;.</li>
+<li><strong>Read the MVP plan:</strong> when the interview is done, Claude saves <code>MVP Plan.md</code> and summarizes it. Check that it describes what you want.</li>
+</ul>
+<br>
+
+<h2>Step 04: Review the Mockup</h2>
+<p>Claude creates <code>Mockup.html</code> and shows it to you. It's a picture of your app's main screen, with sample data: nothing runs yet. To see it full size, open your project folder and double-click <code>Mockup.html</code>.</p>
+<ul>
+<li><strong>Ask for changes in plain language,</strong> for example:</li>
+</ul>
+<blockquote>
+<p>Move the chart to the top, and show this week's totals instead of the whole month.</p>
+</blockquote>
+<blockquote>
+<p>Add a notes field to each entry, and make the refill dates stand out when they're less than a week away.</p>
+</blockquote>
+<ul>
+<li><strong>One or two rounds is usually enough.</strong> The details are easier to change once the app works.</li>
+<li><strong>Happy with it?</strong> Go to Step 05.</li>
+</ul>
+<br>
+
+<h2>Step 05: Build Your App</h2>
+<ul>
+<li><strong>Heads-up:</strong> Claude takes about 10–15 minutes to build the app. Stay nearby, since it may pause for your approval. See <strong>Step 06: While You Wait</strong> below for what to do in the meantime.</li>
+</ul>
+<h3>Build Prompt</h3>
+<p>This prompt is the same for every project. It tells Claude to build the app you designed, set up the same way as your other lab apps.</p>
+<blockquote>
+<p>The mockup is approved. Please build the app from <code>MVP Plan.md</code> and <code>Mockup.html</code>, in the same project subfolder. First read <code>My Building Skill.md</code> in my lab folder, if it's there, and follow it, and reuse what worked in the earlier labs in this session.</p>
+<ul>
+<li>Use Python 3.12+, uv for dependencies, and Streamlit for the interface. Configure Streamlit to always run on port 8504 (in <code>.streamlit/config.toml</code>), so it won't conflict with my other lab apps.</li>
+<li>Store my data locally, in a SQLite database in the project folder, so it's kept between app restarts. Include a clearly labeled button to load fictional sample data, so I can try the app right away.</li>
+<li>If the app uses AI (for example, to read a photo or to summarize my entries), use Ollama with the <code>qwen3.5:9b</code> model running on my laptop: no cloud AI services or external AI API calls. Show me anything the AI suggests, and let me review and correct it before it's saved.</li>
+<li>Keep all the limits in <code>MVP Plan.md</code>, and show them in the app where they matter.</li>
+</ul>
+<p>Build the complete working project with clearly organized code and tests for the main features.</p>
+<p>Make the app easy to start. Create a start file I can double-click, named after the app (for example, <code>Start Fitness Tracker.command</code> for macOS, made executable, and <code>Start Fitness Tracker.bat</code> for Windows). Each should install uv if it's missing (using uv's official standalone installer, not Homebrew) and call it by its full path, so I don't need to restart Terminal; install the dependencies; check that Ollama is running and download the model if it's missing; then start the app and open http://localhost:8504 in my browser. Show clear progress messages, and explain how to stop the app.</p>
+<p>Write two guides for a beginner, and keep both updated as the code changes. Save each one in the project folder as Markdown, HTML, and PDF (<code>Quickstart.md</code>, <code>Quickstart.html</code>, <code>Quickstart.pdf</code>, and <code>Application Guide.md</code>, <code>Application Guide.html</code>, <code>Application Guide.pdf</code>). In both, include instructions for both macOS (Terminal) and Windows (PowerShell), clearly labeled, wherever the steps or commands differ.</p>
+<ul>
+<li><strong>Quickstart:</strong> title it &quot;[App name] — Lab 04 Quickstart&quot;. Keep it to one page: a one-line summary, the app's folder and address (http://localhost:8504), how to start the app with the start file, how to stop and restart it, and the manual commands to use if the start file doesn't work.</li>
+<li><strong>Application Guide:</strong> title it &quot;[App name] — Lab 04 Application Guide&quot;. Explain what the app does and its limits, how it works in plain language, where my data is stored, which settings I can change, and how to run the tests and troubleshoot common problems.</li>
+</ul>
+<p>When you're done, keep your final message to me short: tell me to open <code>Quickstart.html</code> and double-click the start file.</p>
+</blockquote>
+<br>
+
+<h2>Step 06: While You Wait</h2>
+<p>Claude is now building your app. This takes about 10–15 minutes, and Claude shows its progress as it works. <strong>Stay close to your laptop:</strong> Claude sometimes pauses to ask a question or for your permission, and it waits until you answer.</p>
+<ul>
+<li><p><strong>Keep an eye on Claude:</strong> glance at the Claude window every minute or two. If it asks for permission, read the request and click <strong>Allow</strong> (or <strong>Allow for this task</strong>, so it asks less often). If it asks a question, answer it. Nothing moves forward until you do.</p>
+</li>
+<li><p><strong>Check your model:</strong> there's nothing new to download. If you skipped Lab 02, open a terminal window (<strong>Terminal</strong> on a Mac, <strong>PowerShell</strong> on Windows) and run this command now:</p>
+</li>
+</ul>
+<pre><code class="language-sh">ollama pull qwen3.5:9b
+</code></pre>
+<ul>
+<li><p><strong>Plan your test:</strong> look at the must-haves in <code>MVP Plan.md</code>. In Step 08, you'll check each one.</p>
+</li>
+<li><p><strong>Compare notes with your neighbors:</strong> see what they're building, and share ideas.</p>
+</li>
+<li><p><strong>Feel free to take a quick break.</strong> Check the Claude window as soon as you're back.</p>
+</li>
+</ul>
+<br>
+
+<h2>Step 07: Run Your App</h2>
+<p>When Claude has finished, your project folder (for example, <code>lab-04-fitness-tracker</code>) contains your app, a start file, and two guides: a <strong>Quickstart</strong> (how to start and stop the app) and an <strong>Application Guide</strong> (how the app works).</p>
+<ul>
+<li><strong>Open the Quickstart:</strong> in your project folder, double-click <code>Quickstart.html</code>. It opens in your browser.</li>
+<li><strong>Start the app:</strong> double-click the start file, <code>Start &lt;your app name&gt;.command</code> (Mac) or <code>.bat</code> (Windows). A terminal window opens and shows its progress. The first start takes a few minutes.</li>
+<li><strong>Open the app:</strong> your browser opens http://localhost:8504. If it doesn't, type that address into your browser.</li>
+<li><strong>Keep the terminal window open:</strong> the app runs as long as that window is open. To stop it, click the window and press <strong>Control + C</strong>.</li>
+</ul>
+<br>
+
+<h2>Step 08: Try It</h2>
+<p>Your app is unique, so your <code>MVP Plan.md</code> is your checklist.</p>
+<ul>
+<li><strong>Load the sample data</strong> and look around. Does the main screen look like your mockup?</li>
+<li><strong>Check each must-have</strong> in <code>MVP Plan.md</code>: does it work the way you described?</li>
+<li><strong>Add an entry of your own,</strong> then restart the app and check that it's still there.</li>
+<li><strong>If your app reads photos or files:</strong> try one, and check that you can review and correct what the AI suggests before it's saved.</li>
+<li><strong>Check the limits:</strong> for example, a medication tracker shouldn't give dosing advice, and a portfolio tracker shouldn't tell you what to buy.</li>
+</ul>
+<p>When something isn't right, tell Claude what you expected and what happened, and fix one thing at a time.</p>
+<br>
+
+<h2>Step 09: Save What You Learned as a Skill</h2>
+<p>Add this lab's lesson to the skill file you started in Lab 01. Send this prompt:</p>
+<blockquote>
+<p>Update <code>My Building Skill.md</code> with what we learned in Lab 04: for a new idea, interview me first with a few multiple-choice questions, write a short MVP plan with must-haves and ideas for later, and show me a mockup with sample data before building. Also note any preferences I showed during the interview and mockup review. Keep everything that's already in the file. If the file doesn't exist yet, create it.</p>
+</blockquote>
+<p>Next time you have an idea, ask Claude to read <code>My Building Skill.md</code> first, and it will start with the interview.</p>
+<br>
+
+<h2>If You Get Stuck</h2>
+<p>If something fails, describe to Claude what you did, what you expected, and what happened. Include the error message when there is one. For example:</p>
+<blockquote>
+<p>I clicked Save on a new entry, but it produced this error: [paste error]. Please help me fix it and update the Quickstart and Application Guide if any setup steps are missing.</p>
+</blockquote>
+<p>Common problems:</p>
+<ul>
+<li><strong>Claude starts building before showing a mockup:</strong> tell it, &quot;Please stop. Show me the MVP plan and a mockup first, and wait for my approval.&quot;</li>
+<li><strong>The interview or the plan keeps growing:</strong> tell Claude, &quot;Let's keep the first version small. Move everything except the top three must-haves to ideas for later.&quot;</li>
+<li><strong>Claude says it can't find your folder:</strong> add your lab folder to the session again, then tell Claude: &quot;I've attached the folder now. Please put the project there.&quot;</li>
+<li><strong>Strange file errors, or the build keeps failing:</strong> check where your lab folder is. If it's inside OneDrive, Dropbox, Box, Google Drive or iCloud (including a synced Desktop or Documents folder), the sync app can lock files while Claude writes them. Create a new folder in your home folder (see Lab 00), add it to the session, and ask Claude to build the project there.</li>
+<li><strong>The Mac won't open the start file:</strong> right-click the <code>.command</code> file, choose <strong>Open</strong>, then click <strong>Open</strong> again. If it still won't run, ask Claude to make the start file executable.</li>
+<li><strong>&quot;Can't reach Ollama&quot;:</strong> open the Ollama app and check for the llama icon in the menu bar, then try again.</li>
+<li><strong>Reading a photo is slow:</strong> the model takes a moment to load the first time. Later photos are faster.</li>
+<li><strong>Your laptop slows to a crawl or freezes:</strong> close other apps first. If that doesn't help, ask Claude: &quot;My laptop is struggling. Please switch the app to a smaller model, such as qwen3.5:4b, and update the guides.&quot; Or ask a lab proctor for a lab PC.</li>
+<li><strong>&quot;Port 8504 is already in use&quot;:</strong> the app is probably already running in another terminal window. Stop that one with <strong>Control + C</strong>, or use the one that's running.</li>
+<li><strong>Anything else:</strong> copy the error message into Claude and ask for help, as in the example above.</li>
+</ul>
+<br>
+
+<h2>Key Takeaways</h2>
+<p>In this lab, you were the product owner. Instead of handing Claude a finished design, you let it interview you, agreed on a small plan, and checked a mockup before any code was written. That's a habit worth keeping: a mockup takes a minute or two to change, while a finished app takes much longer.</p>
+<p>You also saw how far a &quot;context rich&quot; session can take you. Claude reused what it learned in the earlier labs (how you like apps set up, started and documented) to build something new, quickly.</p>
+<ul>
+<li><strong>Next:</strong> keep improving your app with the ideas below, or try <a href="Lab_03_Guide_Image_to_Calendar.html">Lab 03 — Build an Image-to-Calendar Assistant</a> if you haven't yet.</li>
+</ul>
+<br>
+
+<h2>Optional: Keep Going</h2>
+<p>Your <code>MVP Plan.md</code> has a list of ideas for later. Pick one, and add it the same way: describe it, ask for a quick mockup if it changes the screen, then build it. Make one change at a time and try the app again. For example:</p>
+<blockquote>
+<p>Let's add the next idea from the &quot;ideas for later&quot; list in <code>MVP Plan.md</code>. Show me a quick mockup of the change first, then build it and update the guides.</p>
+</blockquote>
+<blockquote>
+<p>Add a way to export my data to a CSV file, so I can keep a backup.</p>
+</blockquote>
+<br>
+
+<h2>What's Next</h2>
+<ul>
+<li><strong>Lab 03:</strong> if you haven't done it yet, try <a href="Lab_03_Guide_Image_to_Calendar.html">Lab 03 — Build an Image-to-Calendar Assistant</a>.</li>
+<li><strong>Before you leave:</strong> see <a href="Lab_Save_Your_Work.html">How to Save Your Work for Later</a>, so you can pick up where you left off.</li>
+</ul>
+<div class="bottomnav"><a href="https://gcodekhanna1.github.io/2026-10-ai-skills-lab/">← Main Menu</a></div></main><script>
+(function(){
+  var ICON='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="13" height="13" rx="2"/><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"/></svg>';
+  function toText(el){
+    var out=[];
+    Array.prototype.forEach.call(el.children,function(n){
+      if(n.classList.contains('copybtn'))return;
+      if(n.tagName==='UL'||n.tagName==='OL'){
+        Array.prototype.forEach.call(n.children,function(li,i){
+          out.push((n.tagName==='OL'?(i+1)+'. ':'- ')+li.innerText.trim());});
+      }else if(n.tagName==='PRE'){out.push(n.innerText.replace(/\n$/,''));}
+      else{out.push(n.innerText.trim());}
+      out.push('');
+    });
+    return out.join('\n').trim()+'\n';
+  }
+  function fallback(t){var a=document.createElement('textarea');a.value=t;a.style.position='fixed';a.style.opacity='0';
+    document.body.appendChild(a);a.select();try{document.execCommand('copy');}finally{document.body.removeChild(a);}}
+  document.querySelectorAll('main blockquote').forEach(function(bq){
+    var b=document.createElement('button');b.type='button';b.className='copybtn';b.title='Copy this prompt';
+    b.innerHTML=ICON+'<span>Copy</span>';
+    b.addEventListener('click',function(){
+      var t=toText(bq),label=b.querySelector('span');
+      var done=function(){b.classList.add('done');label.textContent='Copied!';
+        setTimeout(function(){b.classList.remove('done');label.textContent='Copy';},1800);};
+      if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(t).then(done,function(){fallback(t);done();});}
+      else{fallback(t);done();}
+    });
+    bq.appendChild(b);
+  });
+})();
+</script></body></html>
