@@ -25,7 +25,7 @@ If you have time before the workshop, you can do this setup at home. It will sav
 
 * **All guides and materials:** [gcodekhanna1.github.io/2026-10-ai-skills-lab](https://gcodekhanna1.github.io/2026-10-ai-skills-lab/). Each guide is a web page, with a PDF version to print or save.
 
-* **Short on time?** Steps 01–03 can be done before the lab. Steps 04–07 are done in the lab, once you have your desk number.
+* **Short on time?** Steps 01–03 can be done before the lab on your own laptop. Steps 04–07 are done in the lab, once you have your desk number.
 
 <br>
 
@@ -52,7 +52,7 @@ If you have time before the workshop, you can do this setup at home. It will sav
 
 ## Step 01: Create a Folder for Your Lab Files
 
-*✅ You can do this step before the lab.*
+*✅ You can do this step before the lab on your own laptop.*
 
 <p class="warning">⚠️ Make sure to create this folder in your computer's home folder (the folder with your user name). Do NOT create it in OneDrive, Dropbox, Box, Google Drive or iCloud Drive. We have found that the constant syncing of these cloud-based folders breaks the build. The Desktop or Documents folder is OK as long as it isn't being synced by a cloud service.</p>
 
@@ -69,7 +69,7 @@ If you have time before the workshop, you can do this setup at home. It will sav
 
 ## Step 02: Install the Claude Desktop App
 
-*✅ You can do this step before the lab.*
+*✅ You can do this step before the lab on your own laptop.*
 
 * **Using a lab PC?** The Claude desktop app is already installed. Skip to Step 03.
 
@@ -82,7 +82,7 @@ If you have time before the workshop, you can do this setup at home. It will sav
 
 ## Step 03: Install Ollama
 
-*✅ You can do this step before the lab.*
+*✅ You can do this step before the lab on your own laptop.*
 
 * **Using a lab PC?** Ollama is already installed. Skip to **Check That Ollama Is Running** below.
 
