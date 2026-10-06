@@ -143,6 +143,8 @@ Claude is now building your app. This takes about 10–15 minutes, and Claude sh
 
 * **Keep an eye on Claude:** glance at the Claude window every minute or two. If it asks for permission, read the request and click **Allow** (or **Allow for this task**, so it asks less often). If it asks a question, answer it. Nothing moves forward until you do.
 
+<p class="labpc"><b class="lead">🖥️ On a lab PC: the models are already downloaded, so just check.</b>In a terminal window, run <code>ollama list</code> and look for <code>llama3.2:3b</code> and <code>nomic-embed-text</code>. If either is missing, run the commands below.</p>
+
 * **Download the AI models:** open a terminal window, as in Lab 00 (**Terminal** on a Mac, **PowerShell** on Windows), and run these two commands, one at a time. Together they download about 2.3 GB, so this takes a few minutes.
 
 ```sh

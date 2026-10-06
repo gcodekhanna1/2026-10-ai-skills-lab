@@ -44,7 +44,7 @@ Your app may look and work a little differently from the examples—or from the 
 
 ## Behind the Scenes (Optional Reading)
 
-Behind the scenes, the app syncs a configurable number of your most recently active spaces and their latest messages into a local SQLite database. It then sends that conversation text to a local Ollama model and uses schema-enforced structured output so the model reliably returns a list of pending tasks—each with a short description, an owner, a priority, a due date when one was mentioned, and a confidence score. The model is instructed to ignore greetings, general discussion, and anything already resolved, and to surface only genuine unresolved commitments or asks. This doesn't train the model on your messages; it just reads them and reports back structured results.
+Behind the scenes, the app syncs a configurable number of your most recently active spaces and their latest messages into a local SQLite database. It then sends that conversation text to a local Ollama model in small batches, so tasks appear on the page as each batch finishes, and uses schema-enforced structured output so the model reliably returns a list of pending tasks—each with a short description, an owner, a priority, a due date when one was mentioned, and a confidence score. The model is instructed to ignore greetings, general discussion, and anything already resolved, and to surface only genuine unresolved commitments or asks. This doesn't train the model on your messages; it just reads them and reports back structured results.
 
 Each extracted task is shown alongside the exact message it came from, so you can check the AI's read of the conversation yourself. You can mark a task complete or dismiss it if the AI got it wrong, and that decision is remembered the next time you open the app. The app is strictly read-only toward Webex: it never sends, edits, or deletes anything in your spaces.
 
@@ -84,12 +84,13 @@ And you can take the code home and keep using it! Once you've set up the require
 >
 > Here's how it should work:
 >
-> - Use the Webex REST API with a user access token (not a bot token, since a bot can't read a user's full conversation history) to fetch the most recently active spaces—default to the 10 most recent, but make it configurable.
-> - For each space, fetch the latest messages—default to 50 per space, configurable—and store synchronized spaces, messages, and extracted tasks in SQLite.
+> - Use the Webex REST API with a user access token (not a bot token, since a bot can't read a user's full conversation history) to fetch the most recently active spaces—default to the 5 most recent, but make it configurable.
+> - For each space, fetch only the latest messages—default to 30 per space, configurable—in a single request using the API's `max` parameter. Don't page through the space's full history. Store synchronized spaces, messages, and extracted tasks in SQLite.
 > - Send the message content to a local Ollama model and use schema-enforced structured outputs so the model reliably returns a list of pending tasks, each with a description, owner, priority, due date, confidence score, and the source message as evidence.
 > - Instruct the model to exclude greetings, general discussion, and anything already resolved or completed—only surface genuinely unresolved commitments or asks.
-> - Default to the qwen3.5:9b model as the balance of quality and speed for this kind of conversation analysis; support swapping in qwen3.5:4b on lower-memory machines, qwen3.5:27b for higher quality, or gemma3:12b as a conservative alternative.
+> - Default to the qwen3.5:9b model as the balance of quality and speed for this kind of conversation analysis; support swapping in qwen3.5:4b on lower-memory machines, qwen3.5:27b for higher quality, or gemma3:12b as a conservative alternative. For this extraction, turn off the model's thinking mode (Ollama's `think: false`), keep the model loaded between batches, and use a context size that fits one batch.
 > - Show a "Sync and analyze" control in the sidebar with a summary of the last run: when it ran, how many spaces were analyzed, and how many messages were reviewed.
+> - Make "Sync and analyze" work in two visible phases. First, download all the selected spaces and messages into SQLite, with a progress bar and counts. Then analyze them in small batches (one space at a time, splitting long spaces into chunks of about 15 messages), showing which space is being analyzed (for example, "Analyzing space 3 of 5") and adding each batch's task cards to the page as soon as that batch finishes, instead of waiting for the whole run. Add a Stop button that keeps the results found so far.
 > - List the extracted tasks as cards showing description, owner, priority, due date, confidence, and the evidence message, and let me mark each one complete or dismissed—store that decision locally so it persists across restarts.
 > - Never send, edit, or delete anything in Webex—this is strictly read-only against the Webex API.
 > - Create the project in a subfolder named `lab-02-action-center` inside my connected folder. Configure Streamlit to always run on port 8502 (in `.streamlit/config.toml`), so it won't conflict with my other lab apps and they can all run at the same time. Show the address http://localhost:8502 in both guides described below.
@@ -121,6 +122,8 @@ And you can take the code home and keep using it! Once you've set up the require
 Claude is now building your app. This takes about 10–15 minutes, and Claude shows its progress as it works. **Stay close to your laptop:** Claude sometimes pauses to ask a question or for your permission, and it waits until you answer.
 
 * **Keep an eye on Claude:** glance at the Claude window every minute or two. If it asks for permission, read the request and click **Allow** (or **Allow for this task**, so it asks less often). If it asks a question, answer it. Nothing moves forward until you do.
+
+<p class="labpc"><b class="lead">🖥️ On a lab PC: the model is already downloaded, so just check.</b>In a terminal window, run <code>ollama list</code> and look for <code>qwen3.5:9b</code>. If it's missing, run the command below.</p>
 
 * **Download the AI model:** open a terminal window (**Terminal** on a Mac, **PowerShell** on Windows) and run this command. It's the biggest download of the day (several GB), so start it now. If your laptop has only 8 GB of memory, download `qwen3.5:4b` instead.
 
@@ -171,12 +174,13 @@ Here is what an initial result could look like:
 
 ## Step 04: Try It
 
-Start by clicking **Sync and analyze** and picking a space where you know there's an open ask or commitment. Check that the extracted task matches what was actually said, and that the evidence quote is the right message. Evidence helps you verify a task, but it doesn't automatically make it correct.
+Start by clicking **Sync and analyze**. Your messages download first, with a progress bar; then the app analyzes one space at a time, and task cards appear as each batch finishes. Pick a space where you know there's an open ask or commitment. Check that the extracted task matches what was actually said, and that the evidence quote is the right message. Evidence helps you verify a task, but it doesn't automatically make it correct.
 
 Use these checks to see whether your MVP is working:
 
 * Run **Sync and analyze** and confirm the sidebar shows a recent sync summary with spaces and messages counts.
 * Find a task the app extracted and check that its owner, priority, and evidence line up with the real conversation.
+* Click **Stop** during a run and confirm the tasks found so far stay on the page.
 * Mark a task complete or dismissed, then refresh the page and confirm the decision stuck.
 * Check a space that only has greetings or resolved chatter and confirm the app doesn't invent a task for it.
 * Restart the app and confirm your synced spaces, messages, and task decisions are still there.
@@ -224,7 +228,7 @@ Common problems:
 * **"Can't reach Ollama":** open the Ollama app and check for the llama icon in the menu bar, then try again.
 * **"Model isn't downloaded":** run the `ollama pull …` command shown in the message, then try again.
 * **"No pending actions found":** the run worked, but no open tasks were found. Check the sidebar's **Last run** summary for problems, or try the neighbor exercise above.
-* **The first sync is slow:** the model takes a moment to load, and every space is analyzed for the first time. Later syncs skip spaces that haven't changed.
+* **The first sync is slow:** the model takes a moment to load, and every space is analyzed for the first time. Later syncs skip spaces that haven't changed. Still too slow? Lower the number of spaces or messages per space in the app's settings.
 * **Your laptop slows to a crawl or freezes:** AI models running on your laptop need a lot of memory, and older laptops can struggle. Close other apps first. If that doesn't help, ask Claude: "My laptop is struggling. Please switch the app to the smaller qwen3.5:4b model and update the guides." Or ask a lab proctor for a lab PC.
 * **"Port 8502 is already in use":** the app is probably already running in another terminal window. Stop that one with **Control + C**, or use the one that's running.
 * **Anything else:** copy the error message into Claude and ask for help, as in the example above.
@@ -250,6 +254,10 @@ If you have time, try improving your Action Center. Make one change at a time an
 > Every task shows 100% confidence, so the score doesn't help me. Please make the confidence scores more realistic, so clear asks score high and vague ones score lower.
 
 > Tasks that belong to me show my full name as the owner. Please show "You" as the owner for my own tasks, and add a filter to show only my tasks.
+
+If syncing and analyzing takes a long time and nothing shows until the end (for example, if you built your app with an earlier version of this lab):
+
+> My Action Center takes a long time to sync and analyze, and nothing shows until the end. Please make it faster and show progress: fetch only the latest messages for each space in a single request (the Webex API's `max` parameter) instead of paging through the full history; download everything first with a progress bar, then analyze in small batches (one space at a time, or about 15 messages per batch), showing which space is being analyzed and adding task cards as each batch finishes; add a Stop button that keeps the results so far; and turn off the model's thinking mode for this extraction (Ollama's `think: false`). Update the Quickstart and Application Guide.
 
 Or, if the app picks up something that isn't a real task:
 

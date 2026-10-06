@@ -27,6 +27,23 @@ The goal of this document is to walk you through the steps of setting up the bas
 
 <br>
 
+## Your Path Through This Guide
+
+Some steps are different on a lab PC, because they're already done for you. Look for the blue **🖥️ On a lab PC** boxes.
+
+<table class="path">
+<tr><th>Step</th><th>💻 On your own laptop</th><th>🖥️ On a lab PC</th></tr>
+<tr><td>01 Create a folder for your lab files</td><td>Do it</td><td>Do it</td></tr>
+<tr><td>02 Install the Claude desktop app</td><td>Install or update it</td><td class="skip"><b>Skip:</b> already installed</td></tr>
+<tr><td>03 Install Ollama</td><td>Install it, then check it's running</td><td class="skip"><b>Don't install it:</b> just check it's running</td></tr>
+<tr><td>04 Open your email</td><td>Do it</td><td class="skip"><b>Check Claude first:</b> skip if Claude is already signed in as your Demo number</td></tr>
+<tr><td>05 Log into Claude</td><td>Do it</td><td class="skip"><b>Check first:</b> Claude may already be signed in as your Demo number</td></tr>
+<tr><td>06 Start a Cowork session</td><td>Do it</td><td>Do it (start a new session)</td></tr>
+<tr><td>07 Access Webex Messaging</td><td>Do it</td><td>Do it</td></tr>
+</table>
+
+<br>
+
 ## Overview of What You Need
 
 * **Laptop or lab PC:** your choice. Use your own laptop, or a lab PC that already has the Claude desktop app and Ollama installed. Either way, you can take everything you build with you (see [How to Save Your Work for Later](Lab_Save_Your_Work.html)).
@@ -69,7 +86,7 @@ The goal of this document is to walk you through the steps of setting up the bas
 
 *✅ You can do this step before the lab on your own laptop.*
 
-* **Using a lab PC?** The Claude desktop app is already installed. Skip to Step 03.
+<p class="labpc"><b class="lead">🖥️ On a lab PC: nothing to do here.</b>Claude is already installed. Go straight to <b>Step 03</b>.</p>
 
 * If you have not done so already, install the Claude desktop app from [claude.com/download](https://claude.com/download).
     - **Already have it?** Update it to the latest version before the lab.
@@ -82,7 +99,7 @@ The goal of this document is to walk you through the steps of setting up the bas
 
 *✅ You can do this step before the lab on your own laptop.*
 
-* **Using a lab PC?** Ollama is already installed. Skip to **Check That Ollama Is Running** below.
+<p class="labpc"><b class="lead">🖥️ On a lab PC: don't install Ollama, just check it.</b>Ollama is already installed. Skip to <b>Check That Ollama Is Running</b> below.</p>
 
 * Download and install Ollama for your operating system from [ollama.com/download](https://ollama.com/download).
 
@@ -93,6 +110,8 @@ The goal of this document is to walk you through the steps of setting up the bas
 <br>
 
 ### Check That Ollama Is Running
+
+<p class="info"><b>You don't need an Ollama account.</b> If Ollama asks you to sign in or create an account, close that window: everything in this lab runs without one.</p>
 
 * **Menu bar:** after installing, open the Ollama app. On a Mac, a small llama icon appears in the menu bar at the top right of your screen (on Windows, in the system tray near the clock). If you see it, Ollama is running.
 
@@ -107,13 +126,15 @@ ollama --version
 
 * You should see a line like `ollama version is 0.x.x`. If you see `command not found` instead, open the Ollama app once and try again.
 
-* Ollama starts with no AI models installed. Each lab will tell you which model to download when you need it.
+* Ollama starts with no AI models installed. Each lab will tell you which model to download when you need it. (On a lab PC, they're already downloaded.)
 
 <br>
 
 ## Step 04: Open Your Email
 
 *🏫 Do this step in the lab, once you have your desk number.*
+
+<p class="labpc"><b class="lead">🖥️ On a lab PC: check Claude first.</b>Open Claude and look at the lower left corner. If it already shows your Demo number (for example, Demo-07), you're signed in: skip Steps 04 and 05 and go to <b>Step 06</b>. Otherwise, do this step.</p>
 
 * **Why now:** when you log into Claude in the next step, Claude emails you a sign-in link. With your email already open, you can click it right away.
 
@@ -127,6 +148,8 @@ ollama --version
 ## Step 05: Log Into the Claude Desktop App
 
 *🏫 Do this step in the lab, once you have your desk number.*
+
+<p class="labpc"><b class="lead">🖥️ On a lab PC: you may already be signed in.</b>If the lower left corner of Claude shows your Demo number, go to <b>Step 06</b>. If it shows a different Demo number, click it, choose <b>Log out</b>, and sign in with yours as described below.</p>
 
 * Note your organization account email. It should have a format such as `demo-xy@paradigmventures.ai`.
 
@@ -161,6 +184,8 @@ ollama --version
 ## Step 06: Start a Cowork Session
 
 *🏫 Do this step in the lab, once you have your desk number.*
+
+<p class="labpc"><b class="lead">🖥️ On a lab PC: start a new session.</b>You may see sessions from an earlier participant in the sidebar. Ignore them, and start a <b>+ New</b> session with your own lab folder.</p>
 
 * At the top right of the sidebar, make sure **Chat and Cowork** (the speech-bubble icon) is selected.
 

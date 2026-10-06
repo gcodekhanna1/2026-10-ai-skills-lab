@@ -21,6 +21,11 @@ blockquote{position:relative;margin:22px 0;padding:34px 22px 14px;background:#f4
 
 p.warning{color:#b42318;background:#fef3f2;border:1px solid #fecdca;border-left:5px solid #d92d20;border-radius:8px;padding:12px 16px;font-weight:600}@media print{p.warning{break-inside:avoid}}
 
+p.labpc{background:#eff6ff;border:1px solid #bfdbfe;border-left:5px solid #2563eb;border-radius:8px;padding:12px 16px;color:#1e3a8a;margin:12px 0}p.labpc b.lead{display:block;font-size:1.05em;margin-bottom:2px}
+p.info{background:#f9fafb;border:1px solid #e5e7eb;border-left:5px solid #9ca3af;border-radius:8px;padding:10px 16px;margin:12px 0}
+table.path{border-collapse:collapse;width:100%}table.path th,table.path td{border:1px solid #e5e7eb;padding:7px 10px;text-align:left;vertical-align:top}table.path th{background:#f9fafb}table.path td.skip{background:#eff6ff;color:#1e3a8a}
+@media print{p.labpc,p.info,table.path{break-inside:avoid}p.labpc,p.info,table.path td.skip{-webkit-print-color-adjust:exact;print-color-adjust:exact}}
+
 .copybtn{position:absolute;top:8px;right:10px;display:inline-flex;align-items:center;gap:5px;font:600 .72rem/1 -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;letter-spacing:.04em;color:#0b4f8a;background:#fff;border:1px solid #c9d8ee;border-radius:6px;padding:5px 9px;cursor:pointer}.copybtn:hover{background:#e3ecf7}.copybtn svg{width:14px;height:14px}.copybtn.done{color:#067647;border-color:#abefc6}@media print{.copybtn{display:none!important}}
 
 .topnav{position:sticky;top:0;z-index:10;background:#0b0c12;border-bottom:3px solid transparent;border-image:linear-gradient(90deg,#ff8a3d,#e0409b,#7b4dff,#2f6bff) 1}.topnav div{max-width:1000px;margin:0 auto;padding:10px 16px;display:flex;justify-content:space-between;align-items:center;gap:12px;font:14px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}.topnav a{display:inline-block;padding:2px;border-radius:999px;background:linear-gradient(90deg,#ff8a3d,#e0409b,#7b4dff,#2f6bff);text-decoration:none;flex:none}.topnav a span{display:block;background:#0b0c12;border-radius:999px;padding:4px 14px;font-weight:600}.topnav a b{background:linear-gradient(90deg,#ffb07a,#f06ab8,#a98bff,#7fa6ff);-webkit-background-clip:text;background-clip:text;color:transparent}.topnav a:hover span{background:transparent}.topnav a:hover b{color:#fff;background:none;-webkit-background-clip:border-box}.topnav small{color:#c9b8ff;letter-spacing:.1em;text-transform:uppercase;font-size:11px;text-align:right}.bottomnav{margin-top:36px;padding-top:18px;border-top:1px solid #dce4ec}.bottomnav a{display:inline-block;font-weight:600;color:#fff;background:linear-gradient(90deg,#ff8a3d,#e0409b,#7b4dff,#2f6bff);padding:7px 16px;border-radius:8px;text-decoration:none}@media(max-width:650px){.topnav small{display:none}}@media print{.topnav,.bottomnav{display:none!important}}
@@ -33,6 +38,21 @@ p.warning{color:#b42318;background:#fef3f2;border:1px solid #fecdca;border-left:
 <li><p><strong>Before the workshop:</strong> you can do Steps 01–03 at home on your own laptop, which saves time in the lab. Steps 04–07 are done in the lab, once you have your desk number.</p>
 </li>
 </ul>
+<br>
+
+<h2>Your Path Through This Guide</h2>
+<p>Some steps are different on a lab PC, because they're already done for you. Look for the blue <strong>🖥️ On a lab PC</strong> boxes.</p>
+<table class="path">
+<tr><th>Step</th><th>💻 On your own laptop</th><th>🖥️ On a lab PC</th></tr>
+<tr><td>01 Create a folder for your lab files</td><td>Do it</td><td>Do it</td></tr>
+<tr><td>02 Install the Claude desktop app</td><td>Install or update it</td><td class="skip"><b>Skip:</b> already installed</td></tr>
+<tr><td>03 Install Ollama</td><td>Install it, then check it's running</td><td class="skip"><b>Don't install it:</b> just check it's running</td></tr>
+<tr><td>04 Open your email</td><td>Do it</td><td class="skip"><b>Check Claude first:</b> skip if Claude is already signed in as your Demo number</td></tr>
+<tr><td>05 Log into Claude</td><td>Do it</td><td class="skip"><b>Check first:</b> Claude may already be signed in as your Demo number</td></tr>
+<tr><td>06 Start a Cowork session</td><td>Do it</td><td>Do it (start a new session)</td></tr>
+<tr><td>07 Access Webex Messaging</td><td>Do it</td><td>Do it</td></tr>
+</table>
+
 <br>
 
 <h2>Overview of What You Need</h2>
@@ -82,9 +102,9 @@ p.warning{color:#b42318;background:#fef3f2;border:1px solid #fecdca;border-left:
 
 <h2>Step 02: Install the Claude Desktop App</h2>
 <p><em>✅ You can do this step before the lab on your own laptop.</em></p>
+<p class="labpc"><b class="lead">🖥️ On a lab PC: nothing to do here.</b>Claude is already installed. Go straight to <b>Step 03</b>.</p>
+
 <ul>
-<li><p><strong>Using a lab PC?</strong> The Claude desktop app is already installed. Skip to Step 03.</p>
-</li>
 <li><p>If you have not done so already, install the Claude desktop app from <a href="https://claude.com/download">claude.com/download</a>.</p>
 <ul>
 <li><strong>Already have it?</strong> Update it to the latest version before the lab.</li>
@@ -97,11 +117,10 @@ p.warning{color:#b42318;background:#fef3f2;border:1px solid #fecdca;border-left:
 
 <h2>Step 03: Install Ollama</h2>
 <p><em>✅ You can do this step before the lab on your own laptop.</em></p>
+<p class="labpc"><b class="lead">🖥️ On a lab PC: don't install Ollama, just check it.</b>Ollama is already installed. Skip to <b>Check That Ollama Is Running</b> below.</p>
+
 <ul>
-<li><p><strong>Using a lab PC?</strong> Ollama is already installed. Skip to <strong>Check That Ollama Is Running</strong> below.</p>
-</li>
-<li><p>Download and install Ollama for your operating system from <a href="https://ollama.com/download">ollama.com/download</a>.</p>
-</li>
+<li>Download and install Ollama for your operating system from <a href="https://ollama.com/download">ollama.com/download</a>.</li>
 </ul>
 <br>
 <p align="center">
@@ -110,6 +129,8 @@ p.warning{color:#b42318;background:#fef3f2;border:1px solid #fecdca;border-left:
 <br>
 
 <h3>Check That Ollama Is Running</h3>
+<p class="info"><b>You don't need an Ollama account.</b> If Ollama asks you to sign in or create an account, close that window: everything in this lab runs without one.</p>
+
 <ul>
 <li><p><strong>Menu bar:</strong> after installing, open the Ollama app. On a Mac, a small llama icon appears in the menu bar at the top right of your screen (on Windows, in the system tray near the clock). If you see it, Ollama is running.</p>
 </li>
@@ -126,13 +147,15 @@ p.warning{color:#b42318;background:#fef3f2;border:1px solid #fecdca;border-left:
 <ul>
 <li><p>You should see a line like <code>ollama version is 0.x.x</code>. If you see <code>command not found</code> instead, open the Ollama app once and try again.</p>
 </li>
-<li><p>Ollama starts with no AI models installed. Each lab will tell you which model to download when you need it.</p>
+<li><p>Ollama starts with no AI models installed. Each lab will tell you which model to download when you need it. (On a lab PC, they're already downloaded.)</p>
 </li>
 </ul>
 <br>
 
 <h2>Step 04: Open Your Email</h2>
 <p><em>🏫 Do this step in the lab, once you have your desk number.</em></p>
+<p class="labpc"><b class="lead">🖥️ On a lab PC: check Claude first.</b>Open Claude and look at the lower left corner. If it already shows your Demo number (for example, Demo-07), you're signed in: skip Steps 04 and 05 and go to <b>Step 06</b>. Otherwise, do this step.</p>
+
 <ul>
 <li><p><strong>Why now:</strong> when you log into Claude in the next step, Claude emails you a sign-in link. With your email already open, you can click it right away.</p>
 </li>
@@ -148,6 +171,8 @@ p.warning{color:#b42318;background:#fef3f2;border:1px solid #fecdca;border-left:
 
 <h2>Step 05: Log Into the Claude Desktop App</h2>
 <p><em>🏫 Do this step in the lab, once you have your desk number.</em></p>
+<p class="labpc"><b class="lead">🖥️ On a lab PC: you may already be signed in.</b>If the lower left corner of Claude shows your Demo number, go to <b>Step 06</b>. If it shows a different Demo number, click it, choose <b>Log out</b>, and sign in with yours as described below.</p>
+
 <ul>
 <li><p>Note your organization account email. It should have a format such as <code>demo-xy@paradigmventures.ai</code>.</p>
 </li>
@@ -186,6 +211,8 @@ p.warning{color:#b42318;background:#fef3f2;border:1px solid #fecdca;border-left:
 
 <h2>Step 06: Start a Cowork Session</h2>
 <p><em>🏫 Do this step in the lab, once you have your desk number.</em></p>
+<p class="labpc"><b class="lead">🖥️ On a lab PC: start a new session.</b>You may see sessions from an earlier participant in the sidebar. Ignore them, and start a <b>+ New</b> session with your own lab folder.</p>
+
 <ul>
 <li>At the top right of the sidebar, make sure <strong>Chat and Cowork</strong> (the speech-bubble icon) is selected.</li>
 </ul>
