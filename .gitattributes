@@ -1,0 +1,4 @@
+# Left out of GitHub's "Download ZIP" (set in ZIP_EXCLUDE in publish_to_user_folders.py)
+/Lab_Participants* export-ignore
+/Logistics export-ignore
+/Logistics/** export-ignore
